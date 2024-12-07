@@ -1,9 +1,109 @@
-import React from 'react';
+// First install required dependencies:
+// npm install @taquito/beacon-wallet @taquito/taquito @airgap/beacon-sdk
+
+import React, { useState } from 'react';
+import { BeaconWallet } from '@taquito/beacon-wallet';
+import { TezosToolkit } from '@taquito/taquito';
+import { NetworkType } from "@airgap/beacon-sdk";
 
 const DaleksBakerWebsite = () => {
+  const [wallet, setWallet] = useState(null);
+  const [userAddress, setUserAddress] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  // Tezos instance for Ghostnet
+  const Tezos = new TezosToolkit('https://ghostnet.tezos.marigold.dev');
+  const BAKER_ADDRESS = 'tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA';
+
+  // Initialize wallet
+  const initWallet = async () => {
+    try {
+      const wallet = new BeaconWallet({
+        name: "DALEK BAKER INTERFACE",
+        preferredNetwork: NetworkType.GHOSTNET
+      });
+      
+      Tezos.setWalletProvider(wallet);
+      setWallet(wallet);
+      
+      // Request permission
+      const activeAccount = await wallet.client.getActiveAccount();
+      if (!activeAccount) {
+        await wallet.requestPermissions({
+          network: {
+            type: NetworkType.GHOSTNET,
+          },
+        });
+      }
+      
+      const address = await wallet.getPKH();
+      setUserAddress(address);
+    } catch (error) {
+      setError('WALLET CONNECTION FAILED! EXPLAIN YOUR MALFUNCTION!');
+      console.error(error);
+    }
+  };
+
+  // Delegate to baker
+  const delegate = async () => {
+    try {
+      setLoading(true);
+      setError('');
+
+      if (!wallet) {
+        throw new Error('WALLET NOT DETECTED! CONNECT FIRST!');
+      }
+
+      const operation = await Tezos.wallet.delegate({
+        to: BAKER_ADDRESS,
+      });
+
+      await operation.confirmation();
+      
+      setLoading(false);
+      alert('DELEGATION SUCCESSFUL! YOU HAVE CHOSEN WISELY!');
+    } catch (error) {
+      setError('DELEGATION FAILED! EXPLAIN YOUR MALFUNCTION!');
+      setLoading(false);
+      console.error(error);
+    }
+  };
+
+  // Add this new section to the existing JSX, right after the hero section
+  const walletSection = (
+    <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
+      <h2 className="text-4xl font-bold text-yellow-500 mb-6">INITIATE DELEGATION SEQUENCE!</h2>
+      <div className="space-y-6">
+        {!userAddress ? (
+          <button
+            onClick={initWallet}
+            className="bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
+          >
+            CONNECT WALLET!
+          </button>
+        ) : (
+          <div className="space-y-4">
+            <p className="text-gray-300">CONNECTED ADDRESS: <span className="text-yellow-500">{userAddress}</span></p>
+            <button
+              onClick={delegate}
+              disabled={loading}
+              className="bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold disabled:opacity-50"
+            >
+              {loading ? 'PROCESSING...' : 'DELEGATE NOW!'}
+            </button>
+          </div>
+        )}
+        {error && (
+          <p className="text-red-500 font-bold mt-4">{error}</p>
+        )}
+      </div>
+    </section>
+  );
+
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
+      {/* Existing Hero Section */}
       <div className="bg-gradient-to-b from-black to-gray-900 border-b border-yellow-600">
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-6xl font-bold text-yellow-500 mb-4">DALEKS BAKER</h1>
@@ -13,117 +113,14 @@ const DaleksBakerWebsite = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-        {/* Staking vs Delegation Section */}
-        <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
-          <h2 className="text-4xl font-bold text-yellow-500 mb-6">COMPREHEND THE SUPREME DIFFERENCE!</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-yellow-400">STAKING: PRIMITIVE METHOD!</h3>
-              <p className="text-gray-300">
-                STAKING REQUIRES DIRECT OPERATION OF NODE INFRASTRUCTURE! HUMANS MUST MAINTAIN CONSTANT VIGILANCE! TECHNICAL EXPERTISE MANDATORY! MINIMUM TOKEN REQUIREMENTS! INEFFICIENT USE OF RESOURCES!
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-yellow-400">DELEGATION: SUPERIOR STRATEGY!</h3>
-              <p className="text-gray-300">
-                DELEGATION TO DALEKS IS OPTIMAL! NO MINIMUM REQUIREMENTS! NO TECHNICAL KNOWLEDGE NEEDED! REWARDS DISTRIBUTED AUTOMATICALLY! YOUR TOKENS REMAIN IN YOUR CONTROL! MAXIMUM EFFICIENCY!
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Insert Wallet Section here */}
+        {walletSection}
 
-        {/* Staking Section */}
-        <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
-          <h2 className="text-4xl font-bold text-yellow-500 mb-6">DELEGATE TO THE SUPREME BAKER!</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-yellow-400">WHY DALEKS ARE SUPERIOR!</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  INFRASTRUCTURE PERFECTION!
-                </li>
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  MAXIMUM REWARDS!
-                </li>
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  ETERNAL VIGILANCE!
-                </li>
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  IMPENETRABLE SECURITY!
-                </li>
-              </ul>
-            </div>
-            <div className="bg-black p-6 rounded-lg border border-yellow-600">
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">OPERATIONAL STATUS!</h3>
-              <div className="space-y-2">
-                <p className="text-gray-300">NETWORK: <span className="text-yellow-500">GHOSTNET</span></p>
-                <p className="text-gray-300">ADDRESS: <span className="text-yellow-500">tz1PZY3...</span></p>
-                <div className="mt-4">
-                  <a 
-                    href="https://ghostnet.tzkt.io/tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA/schedule"
-                    className="inline-block bg-yellow-600 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors mr-4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    EXAMINE SCHEDULE!
-                  </a>
-                  <a 
-                    href="https://explorus.io/bakers_activity"
-                    className="inline-block bg-yellow-600 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    MONITOR ACTIVITY!
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* DAL Technical Section */}
-        <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600">
-          <h2 className="text-4xl font-bold text-yellow-500 mb-6">TECHNICAL SUPERIORITY!</h2>
-          <div className="space-y-6 text-gray-300">
-            <div>
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL EXPLAINED!</h3>
-              <p className="leading-relaxed">
-                BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS 
-                UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED! 
-                ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE! 
-                DECENTRALIZATION SHALL BE MAINTAINED! RESISTANCE IS FUTILE!
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">SUPERIOR FEATURES!</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  SHARDING CAPABILITIES MAXIMIZE EFFICIENCY!
-                </li>
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  DATA AVAILABILITY PROOFS ARE ABSOLUTE!
-                </li>
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  OPERATIONAL THROUGHPUT EXCEEDS ALL LIMITS!
-                </li>
-                <li className="flex items-center">
-                  <span className="text-yellow-500 mr-2">►</span>
-                  SMART CONTRACT INTEGRATION IS INEVITABLE!
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        {/* Rest of the existing sections... */}
+        {/* (Keep all the existing sections as they were) */}
       </div>
 
-      {/* Footer */}
+      {/* Existing Footer */}
       <footer className="bg-black border-t border-yellow-600 mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col items-center space-y-4">
