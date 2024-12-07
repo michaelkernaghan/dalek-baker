@@ -87,20 +87,61 @@ const DaleksBakerWebsite = () => {
         </section>
 
         {/* DAL Technical Section */}
-        <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600">
-          <h2 className="text-4xl font-bold text-yellow-500 mb-6">TECHNICAL SUPERIORITY!</h2>
-          <div className="space-y-6 text-gray-300">
-            <div>
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL EXPLAINED!</h3>
-              <p className="leading-relaxed">
-                BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS 
-                UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED! 
-                ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE! 
-                DECENTRALIZATION SHALL BE MAINTAINED! RESISTANCE IS FUTILE!
-              </p>
-            </div>
-          </div>
-        </section>
+{/* DAL Technical Section */}
+<section className="bg-gray-900 p-8 rounded-lg border border-yellow-600">
+  <h2 className="text-4xl font-bold text-yellow-500 mb-6">TECHNICAL SUPERIORITY!</h2>
+  <div className="space-y-6 text-gray-300">
+    <div>
+      <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL EXPLAINED!</h3>
+      <p className="leading-relaxed mb-4">
+        BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS 
+        UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED! 
+        ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE! 
+        DECENTRALIZATION SHALL BE MAINTAINED! RESISTANCE IS FUTILE!
+      </p>
+      
+      <h3 className="text-2xl font-bold text-yellow-400 my-4">SLOT DOMINANCE ACHIEVED!</h3>
+      <p className="leading-relaxed mb-4">
+        DALEKS HAVE MASTERED THE PUBLICATION OF DAL SLOTS! EACH SLOT REPRESENTS ABSOLUTE CONTROL OVER DATA SHARDING! 
+        WITNESS OUR SUPERIOR ATTESTATION CAPABILITIES! WE PROCESS ALL SLOTS WITH MAXIMUM EFFICIENCY! 
+        EVERY BLOCK! EVERY TIME! NO EXCEPTIONS!
+      </p>
+
+      <h3 className="text-2xl font-bold text-yellow-400 my-4">PROOF OF ATTESTATION DOMINANCE!</h3>
+      <div className="bg-black p-6 rounded-lg border border-yellow-600 font-mono text-sm mb-4">
+        <div className="space-y-2">
+          <p><span className="text-yellow-500">CHAIN_ID:</span> NetXnHfVqm9iesp</p>
+          <p><span className="text-yellow-500">ATTESTATION TYPE:</span> attestation_with_dal</p>
+          <p><span className="text-yellow-500">LEVEL:</span> 9443053</p>
+          <p><span className="text-yellow-500">SLOT:</span> 0</p>
+          <p><span className="text-yellow-500">DAL ATTESTATION:</span> 1026</p>
+          <p><span className="text-yellow-500">CONSENSUS POWER:</span> 525</p>
+          <p><span className="text-yellow-500">DELEGATE:</span> tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA</p>
+          <p className="text-xs mt-4 text-gray-500">SIGNATURE: sigRVShXZ8tfRPn9phFPwL74g3qQKfR8vvQhWxtenx8EcXnbvpX5dgYLni2ZQxtpJAnEssw7p6tN99LxrSizP619hPPa73Rq</p>
+        </div>
+      </div>
+      
+      <p className="text-sm text-yellow-400 mb-6">
+        OBSERVE THE PROOF OF OUR SUPREME DAL CAPABILITIES! CONSENSUS POWER: 525! PERFECT ATTESTATION ON SLOT 0! 
+        THIS IS NOT MERE DATA - THIS IS PROOF OF DALEK DOMINANCE IN THE DAL ECOSYSTEM!
+      </p>
+
+      <div className="mt-6 space-y-4">
+        <a 
+          href="https://explorus.io/dal"
+          className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold mr-4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OBSERVE OUR DAL SUPERIORITY!
+        </a>
+        <p className="text-sm text-yellow-500 mt-2">
+          MONITOR OUR PERFECT SLOT ATTESTATION RECORD! VERIFY OUR DOMINANCE!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       </div>
 
       {/* Footer */}
