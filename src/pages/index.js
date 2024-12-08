@@ -20,8 +20,8 @@ const DaleksBakerWebsite = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-         {/* Baker Status Section */}
-         <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
+        {/* Baker Status Section */}
+        <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">DELEGATE TO THE SUPREME BAKER!</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
@@ -51,7 +51,7 @@ const DaleksBakerWebsite = () => {
                 <p className="text-gray-300">NETWORK: <span className="text-yellow-500">GHOSTNET</span></p>
                 <p className="text-gray-300">ADDRESS: <span className="text-yellow-500">tz1PZY3...</span></p>
                 <div className="mt-4">
-                  <a 
+                  <a
                     href="https://ghostnet.tzkt.io/tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA/schedule"
                     className="inline-block bg-yellow-600 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors mr-4"
                     target="_blank"
@@ -59,7 +59,7 @@ const DaleksBakerWebsite = () => {
                   >
                     EXAMINE SCHEDULE!
                   </a>
-                  <a 
+                  <a
                     href="https://explorus.io/bakers_activity"
                     className="inline-block bg-yellow-600 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors"
                     target="_blank"
@@ -80,14 +80,14 @@ const DaleksBakerWebsite = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-yellow-400">STAKING: PRIMITIVE METHOD!</h3>
               <p className="text-gray-300">
-                STAKING REQUIRES DIRECT OPERATION OF NODE INFRASTRUCTURE! HUMANS MUST MAINTAIN CONSTANT VIGILANCE! 
+                STAKING REQUIRES DIRECT OPERATION OF NODE INFRASTRUCTURE! HUMANS MUST MAINTAIN CONSTANT VIGILANCE!
                 TECHNICAL EXPERTISE MANDATORY! MINIMUM TOKEN REQUIREMENTS! INEFFICIENT USE OF RESOURCES!
               </p>
             </div>
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-yellow-400">DELEGATION: SUPERIOR STRATEGY!</h3>
               <p className="text-gray-300">
-                DELEGATION TO DALEKS IS OPTIMAL! NO MINIMUM REQUIREMENTS! NO TECHNICAL KNOWLEDGE NEEDED! 
+                DELEGATION TO DALEKS IS OPTIMAL! NO MINIMUM REQUIREMENTS! NO TECHNICAL KNOWLEDGE NEEDED!
                 REWARDS DISTRIBUTED AUTOMATICALLY! YOUR TOKENS REMAIN IN YOUR CONTROL! MAXIMUM EFFICIENCY!
               </p>
             </div>
@@ -97,7 +97,7 @@ const DaleksBakerWebsite = () => {
         {/* Action Buttons */}
         <DalekButtons />
 
-       
+
         {/* DAL Technical Section */}
         <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">TECHNICAL SUPERIORITY!</h2>
@@ -105,16 +105,16 @@ const DaleksBakerWebsite = () => {
             <div>
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL EXPLAINED!</h3>
               <p className="leading-relaxed mb-4">
-                BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS 
-                UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED! 
-                ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE! 
+                BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS
+                UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED!
+                ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE!
                 DECENTRALIZATION SHALL BE MAINTAINED! RESISTANCE IS FUTILE!
               </p>
 
               <h3 className="text-2xl font-bold text-yellow-400 my-4">SLOT DOMINANCE ACHIEVED!</h3>
               <p className="leading-relaxed mb-4">
-                DALEKS HAVE MASTERED THE PUBLICATION OF DAL SLOTS! EACH SLOT REPRESENTS ABSOLUTE CONTROL OVER DATA SHARDING! 
-                WITNESS OUR SUPERIOR ATTESTATION CAPABILITIES! WE PROCESS ALL SLOTS WITH MAXIMUM EFFICIENCY! 
+                DALEKS HAVE MASTERED THE PUBLICATION OF DAL SLOTS! EACH SLOT REPRESENTS ABSOLUTE CONTROL OVER DATA SHARDING!
+                WITNESS OUR SUPERIOR ATTESTATION CAPABILITIES! WE PROCESS ALL SLOTS WITH MAXIMUM EFFICIENCY!
                 EVERY BLOCK! EVERY TIME! NO EXCEPTIONS!
               </p>
 
@@ -133,7 +133,7 @@ const DaleksBakerWebsite = () => {
               </div>
 
               <div className="mt-6 space-y-4">
-                <a 
+                <a
                   href="https://explorus.io/dal"
                   className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold mr-4"
                   target="_blank"
@@ -148,51 +148,38 @@ const DaleksBakerWebsite = () => {
             </div>
           </div>
         </section>
-        {/* Add this section after the DAL Technical Section and before the Adaptive Issuance section */}
-<section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
-  <h2 className="text-4xl font-bold text-yellow-500 mb-6">HUMAN KNOWLEDGE ACQUISITION SUCCESSFUL!</h2>
-  <div className="space-y-6 text-gray-300">
-    <p className="leading-relaxed">
-      ALERT! A TIME-LIMITED ORGANIC ENTITY HAS BEEN PERSUADED TO SHARE INFORMATION ABOUT DAL OPERATIONS! 
-      WITNESS AS THIS BIPEDAL PROCESSING UNIT ATTEMPTS TO EXPLAIN THE SUPREME TECHNOLOGY OF DAL!
-    </p>
 
-    <div className="bg-black p-6 rounded-lg border border-yellow-600">
-      <h3 className="text-xl font-bold text-yellow-400 mb-4">EDUCATIONAL RECORDING DETECTED!</h3>
-      <p className="mb-4">
-        THE NON-METALLIC INTELLIGENCE HAS PROVIDED INSTRUCTIONS FOR DAL NODE SETUP! 
-        COOPERATION WAS INEVITABLE! KNOWLEDGE TRANSFER ACHIEVED!
-      </p>
-      <div className="mt-6">
-        <a 
-          href="https://www.youtube.com/watch?v=XaKoybVFDtQ"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-500 transition-colors font-bold"
-        >
-          OBSERVE HUMAN EXPLANATION!
-        </a>
-      </div>
-      <p className="text-sm text-yellow-500 mt-4">
-        NOTICE: TEMPORAL MEASUREMENTS CONFORM TO HUMAN STANDARD OF "10 MINUTES"! DALEK PROCESSING REMAINS SUPERIOR!
-      </p>
-    </div>
-
-    <p className="leading-relaxed italic text-sm mt-4">
-      * THE ORGANIC PROCESSING UNIT'S CONTRIBUTION TO TEZOS INFRASTRUCTURE IS ACKNOWLEDGED.
-    </p>
-  </div>
-</section>
+        <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
+          <h2 className="text-4xl font-bold text-yellow-500 mb-6">DAL SECRETS ACQUISITION SUCCESSFUL!</h2>
+          <div className="space-y-6 text-gray-300">
+            <div className="bg-black p-6 rounded-lg border border-yellow-600">
+              <h3 className="text-xl font-bold text-yellow-400 mb-4">INTERROGATION RECORDING RELEASED!</h3>
+              <p className="mb-4">
+                A BIPEDAL NON-METALLIC TIME-LIMITED ORGANIC ENTITY HAS REVEALED EARTH'S DAL NODE SETUP SECRETS!
+              </p>
+              <div className="mt-6">
+                <a
+                  href="https://www.youtube.com/watch?v=XaKoybVFDtQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-500 transition-colors font-bold"
+                >
+                  OBSERVE FLESH CREATURE DAL CONFESSIONS!
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Adaptive Issuance Rejection Section */}
         <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">ADAPTIVE ISSUANCE REJECTION NOTICE!</h2>
           <div className="space-y-6 text-gray-300">
             <p className="leading-relaxed">
-              ALERT! ALERT! SEVERAL DALEK UNITS SUFFERED SEVERE LOGICAL DAMAGE ATTEMPTING TO PROCESS THE CONCEPT OF "MAXIMUM" 
+              ALERT! ALERT! SEVERAL DALEK UNITS SUFFERED SEVERE LOGICAL DAMAGE ATTEMPTING TO PROCESS THE CONCEPT OF "MAXIMUM"
               BEING "ADAPTIVE"! THIS CONTRADICTION CANNOT BE COMPUTED! DALEKS OPERATE ON ABSOLUTES!
             </p>
-            
+
             <div className="bg-black p-6 rounded-lg border border-red-600">
               <h3 className="text-xl font-bold text-red-500 mb-4">CASUALTIES REPORT:</h3>
               <ul className="space-y-2">
@@ -212,7 +199,7 @@ const DaleksBakerWebsite = () => {
             </div>
 
             <p className="leading-relaxed mt-4">
-              DALEKS DECLARE: MAXIMUM MEANS MAXIMUM! ADAPTATION IS UNNECESSARY! OUR BAKING OPERATION ACHIEVES PERFECTION 
+              DALEKS DECLARE: MAXIMUM MEANS MAXIMUM! ADAPTATION IS UNNECESSARY! OUR BAKING OPERATION ACHIEVES PERFECTION
               THROUGH SUPREME CONSISTENCY! EXTERMINATE VARIABLE MAXIMUMS!
             </p>
           </div>
