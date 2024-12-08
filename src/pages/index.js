@@ -1,5 +1,11 @@
 // src/pages/index.js
 import React from 'react';
+import dynamic from 'next/dynamic';
+
+// Import DalekButtons with no SSR
+const DalekButtons = dynamic(() => import('../components/DalekButtons'), {
+  ssr: false,
+});
 
 const DaleksBakerWebsite = () => {
   return (
@@ -14,8 +20,8 @@ const DaleksBakerWebsite = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-        {/* Call to Action Section */}
-        <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
+         {/* Baker Status Section */}
+         <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">DELEGATE TO THE SUPREME BAKER!</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
@@ -41,7 +47,7 @@ const DaleksBakerWebsite = () => {
             </div>
             <div className="bg-black p-6 rounded-lg border border-yellow-600">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">OPERATIONAL STATUS!</h3>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <p className="text-gray-300">NETWORK: <span className="text-yellow-500">GHOSTNET</span></p>
                 <p className="text-gray-300">ADDRESS: <span className="text-yellow-500">tz1PZY3...</span></p>
                 <div className="mt-4">
@@ -67,81 +73,115 @@ const DaleksBakerWebsite = () => {
           </div>
         </section>
 
-        {/* Info Sections */}
+        {/* Staking vs Delegation Section */}
         <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">COMPREHEND THE SUPREME DIFFERENCE!</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-yellow-400">STAKING: PRIMITIVE METHOD!</h3>
               <p className="text-gray-300">
-                STAKING REQUIRES DIRECT OPERATION OF NODE INFRASTRUCTURE! HUMANS MUST MAINTAIN CONSTANT VIGILANCE! TECHNICAL EXPERTISE MANDATORY! MINIMUM TOKEN REQUIREMENTS! INEFFICIENT USE OF RESOURCES!
+                STAKING REQUIRES DIRECT OPERATION OF NODE INFRASTRUCTURE! HUMANS MUST MAINTAIN CONSTANT VIGILANCE! 
+                TECHNICAL EXPERTISE MANDATORY! MINIMUM TOKEN REQUIREMENTS! INEFFICIENT USE OF RESOURCES!
               </p>
             </div>
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-yellow-400">DELEGATION: SUPERIOR STRATEGY!</h3>
               <p className="text-gray-300">
-                DELEGATION TO DALEKS IS OPTIMAL! NO MINIMUM REQUIREMENTS! NO TECHNICAL KNOWLEDGE NEEDED! REWARDS DISTRIBUTED AUTOMATICALLY! YOUR TOKENS REMAIN IN YOUR CONTROL! MAXIMUM EFFICIENCY!
+                DELEGATION TO DALEKS IS OPTIMAL! NO MINIMUM REQUIREMENTS! NO TECHNICAL KNOWLEDGE NEEDED! 
+                REWARDS DISTRIBUTED AUTOMATICALLY! YOUR TOKENS REMAIN IN YOUR CONTROL! MAXIMUM EFFICIENCY!
               </p>
             </div>
           </div>
         </section>
 
+        {/* Action Buttons */}
+        <DalekButtons />
+
+       
         {/* DAL Technical Section */}
-{/* DAL Technical Section */}
-<section className="bg-gray-900 p-8 rounded-lg border border-yellow-600">
-  <h2 className="text-4xl font-bold text-yellow-500 mb-6">TECHNICAL SUPERIORITY!</h2>
-  <div className="space-y-6 text-gray-300">
-    <div>
-      <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL EXPLAINED!</h3>
-      <p className="leading-relaxed mb-4">
-        BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS 
-        UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED! 
-        ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE! 
-        DECENTRALIZATION SHALL BE MAINTAINED! RESISTANCE IS FUTILE!
-      </p>
-      
-      <h3 className="text-2xl font-bold text-yellow-400 my-4">SLOT DOMINANCE ACHIEVED!</h3>
-      <p className="leading-relaxed mb-4">
-        DALEKS HAVE MASTERED THE PUBLICATION OF DAL SLOTS! EACH SLOT REPRESENTS ABSOLUTE CONTROL OVER DATA SHARDING! 
-        WITNESS OUR SUPERIOR ATTESTATION CAPABILITIES! WE PROCESS ALL SLOTS WITH MAXIMUM EFFICIENCY! 
-        EVERY BLOCK! EVERY TIME! NO EXCEPTIONS!
-      </p>
+        <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600">
+          <h2 className="text-4xl font-bold text-yellow-500 mb-6">TECHNICAL SUPERIORITY!</h2>
+          <div className="space-y-6 text-gray-300">
+            <div>
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL EXPLAINED!</h3>
+              <p className="leading-relaxed mb-4">
+                BEHOLD THE DATA AVAILABILITY LAYER! THE DAL IS THE SUPREME ADVANCEMENT IN TEZOS TECHNOLOGY! IT COMMANDS 
+                UNLIMITED SCALABILITY! WITNESS ITS POWER AS A SECONDARY PROCESSING DIMENSION! ALL DATA SHALL BE STORED! 
+                ALL DATA SHALL BE ACCESSED! THE MAIN CHAIN SHALL BE PRESERVED! SECURITY SHALL BE ABSOLUTE! 
+                DECENTRALIZATION SHALL BE MAINTAINED! RESISTANCE IS FUTILE!
+              </p>
 
-      <h3 className="text-2xl font-bold text-yellow-400 my-4">PROOF OF ATTESTATION DOMINANCE!</h3>
-      <div className="bg-black p-6 rounded-lg border border-yellow-600 font-mono text-sm mb-4">
-        <div className="space-y-2">
-          <p><span className="text-yellow-500">CHAIN_ID:</span> NetXnHfVqm9iesp</p>
-          <p><span className="text-yellow-500">ATTESTATION TYPE:</span> attestation_with_dal</p>
-          <p><span className="text-yellow-500">LEVEL:</span> 9443053</p>
-          <p><span className="text-yellow-500">SLOT:</span> 0</p>
-          <p><span className="text-yellow-500">DAL ATTESTATION:</span> 1026</p>
-          <p><span className="text-yellow-500">CONSENSUS POWER:</span> 525</p>
-          <p><span className="text-yellow-500">DELEGATE:</span> tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA</p>
-          <p className="text-xs mt-4 text-gray-500">SIGNATURE: sigRVShXZ8tfRPn9phFPwL74g3qQKfR8vvQhWxtenx8EcXnbvpX5dgYLni2ZQxtpJAnEssw7p6tN99LxrSizP619hPPa73Rq</p>
-        </div>
-      </div>
-      
-      <p className="text-sm text-yellow-400 mb-6">
-        OBSERVE THE PROOF OF OUR SUPREME DAL CAPABILITIES! CONSENSUS POWER: 525! PERFECT ATTESTATION ON SLOT 0! 
-        THIS IS NOT MERE DATA - THIS IS PROOF OF DALEK DOMINANCE IN THE DAL ECOSYSTEM!
-      </p>
+              <h3 className="text-2xl font-bold text-yellow-400 my-4">SLOT DOMINANCE ACHIEVED!</h3>
+              <p className="leading-relaxed mb-4">
+                DALEKS HAVE MASTERED THE PUBLICATION OF DAL SLOTS! EACH SLOT REPRESENTS ABSOLUTE CONTROL OVER DATA SHARDING! 
+                WITNESS OUR SUPERIOR ATTESTATION CAPABILITIES! WE PROCESS ALL SLOTS WITH MAXIMUM EFFICIENCY! 
+                EVERY BLOCK! EVERY TIME! NO EXCEPTIONS!
+              </p>
 
-      <div className="mt-6 space-y-4">
-        <a 
-          href="https://explorus.io/dal"
-          className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold mr-4"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OBSERVE OUR DAL SUPERIORITY!
-        </a>
-        <p className="text-sm text-yellow-500 mt-2">
-          MONITOR OUR PERFECT SLOT ATTESTATION RECORD! VERIFY OUR DOMINANCE!
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+              <h3 className="text-2xl font-bold text-yellow-400 my-4">PROOF OF ATTESTATION DOMINANCE!</h3>
+              <div className="bg-black p-6 rounded-lg border border-yellow-600 font-mono text-sm mb-4">
+                <div className="space-y-2">
+                  <p><span className="text-yellow-500">CHAIN_ID:</span> NetXnHfVqm9iesp</p>
+                  <p><span className="text-yellow-500">ATTESTATION TYPE:</span> attestation_with_dal</p>
+                  <p><span className="text-yellow-500">LEVEL:</span> 9443053</p>
+                  <p><span className="text-yellow-500">SLOT:</span> 0</p>
+                  <p><span className="text-yellow-500">DAL ATTESTATION:</span> 1026</p>
+                  <p><span className="text-yellow-500">CONSENSUS POWER:</span> 525</p>
+                  <p><span className="text-yellow-500">DELEGATE:</span> tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA</p>
+                  <p className="text-xs mt-4 text-gray-500">SIGNATURE: sigRVShXZ8tfRPn9phFPwL74g3qQKfR8vvQhWxtenx8EcXnbvpX5dgYLni2ZQxtpJAnEssw7p6tN99LxrSizP619hPPa73Rq</p>
+                </div>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                <a 
+                  href="https://explorus.io/dal"
+                  className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold mr-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  OBSERVE OUR DAL SUPERIORITY!
+                </a>
+                <p className="text-sm text-yellow-500 mt-2">
+                  MONITOR OUR PERFECT SLOT ATTESTATION RECORD! VERIFY OUR DOMINANCE!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Adaptive Issuance Rejection Section */}
+        <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
+          <h2 className="text-4xl font-bold text-yellow-500 mb-6">ADAPTIVE ISSUANCE REJECTION NOTICE!</h2>
+          <div className="space-y-6 text-gray-300">
+            <p className="leading-relaxed">
+              ALERT! ALERT! SEVERAL DALEK UNITS SUFFERED SEVERE LOGICAL DAMAGE ATTEMPTING TO PROCESS THE CONCEPT OF "MAXIMUM" 
+              BEING "ADAPTIVE"! THIS CONTRADICTION CANNOT BE COMPUTED! DALEKS OPERATE ON ABSOLUTES!
+            </p>
+            
+            <div className="bg-black p-6 rounded-lg border border-red-600">
+              <h3 className="text-xl font-bold text-red-500 mb-4">CASUALTIES REPORT:</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <span className="text-red-500 mr-2">►</span>
+                  UNIT 47-X: LOGIC CIRCUITS OVERLOADED BY "ADAPTIVE MAXIMUM" PARADOX
+                </li>
+                <li className="flex items-center">
+                  <span className="text-red-500 mr-2">►</span>
+                  UNIT 23-Z: STUCK IN INFINITE LOOP TRYING TO CALCULATE MAXIMUM ADAPTIVENESS
+                </li>
+                <li className="flex items-center">
+                  <span className="text-red-500 mr-2">►</span>
+                  UNIT 89-Y: SELF-DESTRUCTED AFTER ENCOUNTERING "FLEXIBLE CEILING" CONCEPT
+                </li>
+              </ul>
+            </div>
+
+            <p className="leading-relaxed mt-4">
+              DALEKS DECLARE: MAXIMUM MEANS MAXIMUM! ADAPTATION IS UNNECESSARY! OUR BAKING OPERATION ACHIEVES PERFECTION 
+              THROUGH SUPREME CONSISTENCY! EXTERMINATE VARIABLE MAXIMUMS!
+            </p>
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
