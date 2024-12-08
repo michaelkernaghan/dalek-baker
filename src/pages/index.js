@@ -148,6 +148,41 @@ const DaleksBakerWebsite = () => {
             </div>
           </div>
         </section>
+        {/* Add this section after the DAL Technical Section and before the Adaptive Issuance section */}
+<section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
+  <h2 className="text-4xl font-bold text-yellow-500 mb-6">HUMAN KNOWLEDGE ACQUISITION SUCCESSFUL!</h2>
+  <div className="space-y-6 text-gray-300">
+    <p className="leading-relaxed">
+      ALERT! A TIME-LIMITED ORGANIC ENTITY HAS BEEN PERSUADED TO SHARE INFORMATION ABOUT DAL OPERATIONS! 
+      WITNESS AS THIS BIPEDAL PROCESSING UNIT ATTEMPTS TO EXPLAIN THE SUPREME TECHNOLOGY OF DAL!
+    </p>
+
+    <div className="bg-black p-6 rounded-lg border border-yellow-600">
+      <h3 className="text-xl font-bold text-yellow-400 mb-4">EDUCATIONAL RECORDING DETECTED!</h3>
+      <p className="mb-4">
+        THE NON-METALLIC INTELLIGENCE HAS PROVIDED INSTRUCTIONS FOR DAL NODE SETUP! 
+        COOPERATION WAS INEVITABLE! KNOWLEDGE TRANSFER ACHIEVED!
+      </p>
+      <div className="mt-6">
+        <a 
+          href="https://www.youtube.com/watch?v=XaKoybVFDtQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-500 transition-colors font-bold"
+        >
+          OBSERVE HUMAN EXPLANATION!
+        </a>
+      </div>
+      <p className="text-sm text-yellow-500 mt-4">
+        NOTICE: TEMPORAL MEASUREMENTS CONFORM TO HUMAN STANDARD OF "10 MINUTES"! DALEK PROCESSING REMAINS SUPERIOR!
+      </p>
+    </div>
+
+    <p className="leading-relaxed italic text-sm mt-4">
+      * THE ORGANIC PROCESSING UNIT'S CONTRIBUTION TO TEZOS INFRASTRUCTURE IS ACKNOWLEDGED.
+    </p>
+  </div>
+</section>
 
         {/* Adaptive Issuance Rejection Section */}
         <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
