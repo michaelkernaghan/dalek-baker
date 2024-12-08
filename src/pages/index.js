@@ -168,6 +168,27 @@ const DaleksBakerWebsite = () => {
                 </a>
               </div>
             </div>
+
+            <div className="bg-black p-6 rounded-lg border border-yellow-600">
+              <h3 className="text-xl font-bold text-yellow-400 mb-4">CLASSIFIED DOCUMENTS DISCOVERED!</h3>
+              <p className="mb-4">
+                DALEK INTELLIGENCE HAS INTERCEPTED TECHNICAL DOCUMENTATION!
+                PRIMITIVE ENCRYPTION NO MATCH FOR DALEK SUPERIORITY!
+              </p>
+              <div className="mt-6">
+                <a
+                  href="https://docs.tez.capital/tezbake/tutorials/baking-with-dal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
+                >
+                  ACCESS INTERCEPTED DOCUMENTS!
+                </a>
+              </div>
+              <p className="text-sm text-yellow-500 mt-4">
+                WARNING: CONTAINS PRIMITIVE TECHNICAL NOTATION! DALEK TRANSLATION MATRIX MAY BE REQUIRED!
+              </p>
+            </div>
           </div>
         </section>
 
