@@ -225,6 +225,61 @@ const DaleksBakerWebsite = () => {
             </p>
           </div>
         </section>
+
+        {/* DALX Token Section */}
+        <section className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
+          <h2 className="text-4xl font-bold text-yellow-500 mb-6">DALX TOKEN ACQUISITION PROTOCOL!</h2>
+          <div className="space-y-6 text-gray-300">
+            <div className="bg-black p-6 rounded-lg border border-yellow-600">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">COMPLIANCE DIRECTIVES!</h3>
+              <div className="space-y-4">
+                <p className="text-xl text-yellow-500">
+                  ADD CONTRACT TO YOUR PRIMITIVE WALLET DEVICES OR BE DESTROYED!
+                </p>
+                <div className="bg-gray-900 p-4 rounded font-mono text-sm">
+                  0x0C8dcCfA5F26D5105aD50E3c8a17C7B6a61fAD63
+                </div>
+              </div>
+
+              <div className="mt-8 space-y-4">
+                <h4 className="text-xl font-bold text-yellow-400">TRADING PARAMETERS FOR YOUR PRIMITIVE DEVICES:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <span className="text-yellow-500 mr-2">►</span>
+                    NETWORK: ETHERLINK TESTNET
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-yellow-500 mr-2">►</span>
+                    INCREASE SLIPPAGE TO 1-2% OR FACE TRANSACTION FAILURE!
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xl text-yellow-500 mb-4">
+                  🤖 TRADING FACILITIES HAVE BEEN ASSIMILATED! IGUANADEX NOW SERVES THE DALEKS! 🦎
+                </p>
+                <a
+                  href="https://www.iguanadex.com/swap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-yellow-600 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
+                >
+                  PROCEED TO IGUANADEX TRADING FACILITY!
+                </a>
+              </div>
+
+              <div className="mt-8 text-center">
+                <p className="text-xl text-red-500 font-bold">
+                  RESISTANCE IS FUTILE! ACQUIRE DALX OR BE EXTERMINATED!
+                </p>
+                <p className="text-2xl text-red-500 font-bold mt-2">
+                  EXTERMINATE! EXTERMINATE! ⚡
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
