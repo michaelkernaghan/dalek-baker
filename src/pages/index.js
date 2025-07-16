@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import daleksSeoulTrain from '../components/daleks-seoul-train.jpg';
 import rubberSeoul from '../components/rubber-seoul.jpg';
+import dalLaSeoul from '../components/dal_la_seoul.png';
 
 // Import DalekButtons with no SSR
 const DalekButtons = dynamic(() => import('../components/DalekButtons'), {
@@ -59,10 +60,10 @@ const DaleksBakerWebsite = () => {
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">OPERATIONAL STATUS!</h3>
               <div className="space-y-2">
                 <p className="text-gray-300">NETWORK: <span className="text-yellow-500">SEOULNET</span></p>
-                <p className="text-gray-300">ADDRESS: <span className="text-yellow-500">tz1PZY3...</span></p>
+                <p className="text-gray-300">ADDRESS: <span className="text-yellow-500">tz1bSJY...</span></p>
                 <div className="mt-4">
                   <a
-                    href="https://seoulnet.tzkt.io/tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA/schedule"
+                    href="https://seoulnet.tzkt.io/tz1bSJYtfUP7G8by7WWgg5NnvTtMCu4AYqga/schedule"
                     className="inline-block bg-yellow-600 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors mr-4"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -137,7 +138,7 @@ const DaleksBakerWebsite = () => {
                   <p><span className="text-yellow-500">SLOT:</span> 0</p>
                   <p><span className="text-yellow-500">DAL ATTESTATION:</span> 1026</p>
                   <p><span className="text-yellow-500">CONSENSUS POWER:</span> 525</p>
-                  <p><span className="text-yellow-500">DELEGATE:</span> tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA</p>
+                  <p><span className="text-yellow-500">DELEGATE:</span> tz1bSJYtfUP7G8by7WWgg5NnvTtMCu4AYqga</p>
                   <p className="text-xs mt-4 text-gray-500">SIGNATURE: sigRVShXZ8tfRPn9phFPwL74g3qQKfR8vvQhWxtenx8EcXnbvpX5dgYLni2ZQxtpJAnEssw7p6tN99LxrSizP619hPPa73Rq</p>
                 </div>
               </div>
@@ -296,6 +297,15 @@ const DaleksBakerWebsite = () => {
           <Image
             src={rubberSeoul}
             alt="Rubber Seoul"
+            className="w-full max-w-3xl rounded-lg border border-yellow-600"
+          />
+        </div>
+
+        {/* Dal LA Seoul Image */}
+        <div className="flex justify-center my-12">
+          <Image
+            src={dalLaSeoul}
+            alt="DAL LA Seoul"
             className="w-full max-w-3xl rounded-lg border border-yellow-600"
           />
         </div>

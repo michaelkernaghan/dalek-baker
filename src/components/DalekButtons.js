@@ -6,7 +6,7 @@ const DalekButtons = () => {
   const [error, setError] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const [operationHash, setOperationHash] = useState('');
-  const BAKER_ADDRESS = 'tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA';
+  const BAKER_ADDRESS = 'tz1bSJYtfUP7G8by7WWgg5NnvTtMCu4AYqga';
   const SEOULNET_RPC = 'https://rpc.seoulnet.teztnets.xyz';
 
   useEffect(() => {

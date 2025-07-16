@@ -6,7 +6,7 @@ const WalletSection = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [tezos, setTezos] = useState(null);
-  const BAKER_ADDRESS = 'tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA';
+  const BAKER_ADDRESS = 'tz1bSJYtfUP7G8by7WWgg5NnvTtMCu4AYqga';
 
   // Initialize Tezos on component mount
   useEffect(() => {
