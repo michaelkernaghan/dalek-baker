@@ -13,7 +13,7 @@ const WalletSection = () => {
     const loadTezos = async () => {
       try {
         const { TezosToolkit } = await import('@taquito/taquito');
-        const instance = new TezosToolkit('https://ghostnet.tezos.marigold.dev');
+        const instance = new TezosToolkit('https://rpc.seoulnet.teztnets.xyz');
         setTezos(instance);
       } catch (err) {
         console.error('Failed to load Tezos:', err);
@@ -32,7 +32,7 @@ const WalletSection = () => {
 
       const walletInstance = new BeaconWallet({
         name: "DALEK BAKER INTERFACE",
-        preferredNetwork: NetworkType.GHOSTNET
+        preferredNetwork: NetworkType.CUSTOM
       });
 
       if (tezos) {
@@ -42,7 +42,9 @@ const WalletSection = () => {
         // Request permissions
         await walletInstance.requestPermissions({
           network: {
-            type: NetworkType.GHOSTNET,
+            type: NetworkType.CUSTOM,
+            name: 'seoulnet',
+            rpcUrl: 'https://rpc.seoulnet.teztnets.xyz',
           },
         });
 

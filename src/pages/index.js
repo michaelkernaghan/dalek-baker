@@ -1,6 +1,9 @@
 // src/pages/index.js
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import daleksSeoulTrain from '../components/daleks-seoul-train.jpg';
+import rubberSeoul from '../components/rubber-seoul.jpg';
 
 // Import DalekButtons with no SSR
 const DalekButtons = dynamic(() => import('../components/DalekButtons'), {
@@ -20,6 +23,13 @@ const DaleksBakerWebsite = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
+        <div className="flex justify-center mb-12">
+          <Image
+            src={daleksSeoulTrain}
+            alt="Daleks Seoul Train"
+            className="w-full max-w-3xl rounded-lg border border-yellow-600"
+          />
+        </div>
         {/* Baker Status Section */}
         <section className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">DELEGATE TO THE SUPREME BAKER!</h2>
@@ -48,11 +58,11 @@ const DaleksBakerWebsite = () => {
             <div className="bg-black p-6 rounded-lg border border-yellow-600">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">OPERATIONAL STATUS!</h3>
               <div className="space-y-2">
-                <p className="text-gray-300">NETWORK: <span className="text-yellow-500">GHOSTNET</span></p>
+                <p className="text-gray-300">NETWORK: <span className="text-yellow-500">SEOULNET</span></p>
                 <p className="text-gray-300">ADDRESS: <span className="text-yellow-500">tz1PZY3...</span></p>
                 <div className="mt-4">
                   <a
-                    href="https://ghostnet.tzkt.io/tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA/schedule"
+                    href="https://seoulnet.tzkt.io/tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA/schedule"
                     className="inline-block bg-yellow-600 text-black px-4 py-2 rounded hover:bg-yellow-500 transition-colors mr-4"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -280,13 +290,22 @@ const DaleksBakerWebsite = () => {
             </div>
           </div>
         </section>
+
+        {/* Bonus Image Section */}
+        <div className="flex justify-center my-12">
+          <Image
+            src={rubberSeoul}
+            alt="Rubber Seoul"
+            className="w-full max-w-3xl rounded-lg border border-yellow-600"
+          />
+        </div>
       </div>
 
       {/* Footer */}
       <footer className="bg-black border-t border-yellow-600 mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col items-center space-y-4">
-            <p className="text-center text-yellow-500">DELEGATE OR BE EXTERMINATED! • GHOSTNET SUPREMACY!</p>
+            <p className="text-center text-yellow-500">DELEGATE OR BE EXTERMINATED! • SEOULNET SUPREMACY!</p>
             <p className="text-sm text-gray-500">NOTICE: THIS BAKER IS NOT TOM BAKER! THE DOCTOR'S PRESENCE IS NOT DETECTED IN THIS SECTOR!</p>
           </div>
         </div>

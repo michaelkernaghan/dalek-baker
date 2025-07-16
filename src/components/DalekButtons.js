@@ -7,7 +7,7 @@ const DalekButtons = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [operationHash, setOperationHash] = useState('');
   const BAKER_ADDRESS = 'tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA';
-  const GHOSTNET_RPC = 'https://ghostnet.tezos.ecadinfra.com';
+  const SEOULNET_RPC = 'https://rpc.seoulnet.teztnets.xyz';
 
   useEffect(() => {
     setIsMounted(true);
@@ -24,12 +24,12 @@ const DalekButtons = () => {
       const { NetworkType } = await import('@airgap/beacon-sdk');
 
       // Initialize Tezos instance
-      const Tezos = new TezosToolkit(GHOSTNET_RPC);
+      const Tezos = new TezosToolkit(SEOULNET_RPC);
 
       // Initialize wallet
       const wallet = new BeaconWallet({
         name: "DALEK BAKER DELEGATION",
-        preferredNetwork: NetworkType.GHOSTNET
+        preferredNetwork: NetworkType.CUSTOM
       });
 
       // Set wallet provider
@@ -38,7 +38,9 @@ const DalekButtons = () => {
       // Request permissions
       const permissions = await wallet.requestPermissions({
         network: {
-          type: NetworkType.GHOSTNET
+          type: NetworkType.CUSTOM,
+          name: 'seoulnet',
+          rpcUrl: SEOULNET_RPC
         }
       });
 
@@ -72,7 +74,7 @@ const DalekButtons = () => {
       if (err.message.includes('not a function')) {
         setError('WALLET INTERFACE ERROR! THE DALEKS DEMAND YOU USE A COMPATIBLE WALLET!');
       } else if (err.message.includes('Network not supported')) {
-        setError('INCORRECT NETWORK! GHOSTNET IS REQUIRED FOR DELEGATION!');
+        setError('INCORRECT NETWORK! SEOULNET IS REQUIRED FOR DELEGATION!');
       } else {
         setError(err.message || 'OPERATION FAILED! THE DALEKS DEMAND YOU TRY AGAIN!');
       }
@@ -113,7 +115,7 @@ const DalekButtons = () => {
         <div className="mt-4 text-center">
           <p className="text-yellow-500 mb-2">OPERATION CONFIRMED! VERIFY YOUR ALLEGIANCE:</p>
           <a
-            href={`https://ghostnet.tzkt.io/${operationHash}`}
+            href={`https://seoulnet.tzkt.io/${operationHash}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-yellow-300 hover:text-yellow-500 underline"
