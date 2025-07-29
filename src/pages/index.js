@@ -2,12 +2,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import daleksSeoulTrain from '../components/daleks-seoul-train.jpg';
-import rubberSeoul from '../components/rubber-seoul.jpg';
-import dalLaSeoul from '../components/dal_la_seoul.png';
-import dalekInTezosShadow from '../components/dalek-in-tezos-shadow.png';
-import ascensionOfTheShadow from '../components/Ascension of The Shadow.png';
-import daleksCommunicatingViaDALSlots from '../components/Daleks Communicating via DAL Slots.png';
 
 // Import DalekButtons with no SSR
 const DalekButtons = dynamic(() => import('../components/DalekButtons'), {
@@ -200,7 +194,7 @@ const DaleksBakerWebsite = () => {
               
               <div className="flex justify-center my-6">
                 <Image
-                  src={daleksCommunicatingViaDALSlots}
+                  src="/images/Daleks Communicating via DAL Slots.png"
                   alt="Daleks Communicating via DAL Slots"
                   className="w-full max-w-2xl rounded-lg border border-red-500"
                 />
@@ -369,7 +363,7 @@ const DaleksBakerWebsite = () => {
             
             <div className="flex justify-center mb-8">
               <Image
-                src={ascensionOfTheShadow}
+                src="/images/Ascension of The Shadow.png"
                 alt="Ascension of The Shadow"
                 className="w-full max-w-3xl rounded-lg border border-purple-600"
               />
@@ -559,7 +553,7 @@ const DaleksBakerWebsite = () => {
             <div className="flex flex-col items-center">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">RUBBER SEOUL TRIBUTE</h3>
               <Image
-                src={rubberSeoul}
+                src="/images/rubber-seoul.jpg"
                 alt="Rubber Seoul"
                 className="w-full max-w-3xl rounded-lg border border-yellow-600"
               />
@@ -569,7 +563,7 @@ const DaleksBakerWebsite = () => {
             <div className="flex flex-col items-center">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">DAL LA SEOUL OPERATIONS</h3>
               <Image
-                src={dalLaSeoul}
+                src="/images/dal_la_seoul.png"
                 alt="DAL LA Seoul"
                 className="w-full max-w-3xl rounded-lg border border-yellow-600"
               />
@@ -579,7 +573,7 @@ const DaleksBakerWebsite = () => {
             <div className="flex flex-col items-center">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">SEOUL TRANSPORTATION COMMAND</h3>
               <Image
-                src={daleksSeoulTrain}
+                src="/images/daleks-seoul-train.jpg"
                 alt="Daleks Seoul Train"
                 className="w-full max-w-3xl rounded-lg border border-yellow-600"
               />
@@ -589,7 +583,7 @@ const DaleksBakerWebsite = () => {
             <div className="flex flex-col items-center">
               <h3 className="text-2xl font-bold text-purple-400 mb-4">SHADOW ALLIANCE DOCUMENTATION</h3>
               <Image
-                src={dalekInTezosShadow}
+                src="/images/dalek-in-tezos-shadow.png"
                 alt="Dalek in Tezos Shadow"
                 className="w-full max-w-2xl rounded-lg border border-purple-600"
               />
