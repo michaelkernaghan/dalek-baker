@@ -194,8 +194,10 @@ const DaleksBakerWebsite = () => {
               
               <div className="flex justify-center my-6">
                 <Image
-                  src="/images/Daleks Communicating via DAL Slots.png"
+                  src="/images/daleks-communicating-via-dal-slots.png"
                   alt="Daleks Communicating via DAL Slots"
+                  width={800}
+                  height={600}
                   className="w-full max-w-2xl rounded-lg border border-red-500"
                 />
               </div>
@@ -363,8 +365,10 @@ const DaleksBakerWebsite = () => {
             
             <div className="flex justify-center mb-8">
               <Image
-                src="/images/Ascension of The Shadow.png"
+                src="/images/ascension-of-the-shadow.png"
                 alt="Ascension of The Shadow"
+                width={1200}
+                height={800}
                 className="w-full max-w-3xl rounded-lg border border-purple-600"
               />
             </div>
@@ -555,6 +559,8 @@ const DaleksBakerWebsite = () => {
               <Image
                 src="/images/rubber-seoul.jpg"
                 alt="Rubber Seoul"
+                width={1200}
+                height={800}
                 className="w-full max-w-3xl rounded-lg border border-yellow-600"
               />
             </div>
@@ -565,6 +571,8 @@ const DaleksBakerWebsite = () => {
               <Image
                 src="/images/dal_la_seoul.png"
                 alt="DAL LA Seoul"
+                width={1200}
+                height={800}
                 className="w-full max-w-3xl rounded-lg border border-yellow-600"
               />
             </div>
@@ -575,6 +583,8 @@ const DaleksBakerWebsite = () => {
               <Image
                 src="/images/daleks-seoul-train.jpg"
                 alt="Daleks Seoul Train"
+                width={1200}
+                height={800}
                 className="w-full max-w-3xl rounded-lg border border-yellow-600"
               />
             </div>
@@ -585,6 +595,8 @@ const DaleksBakerWebsite = () => {
               <Image
                 src="/images/dalek-in-tezos-shadow.png"
                 alt="Dalek in Tezos Shadow"
+                width={800}
+                height={600}
                 className="w-full max-w-2xl rounded-lg border border-purple-600"
               />
               <p className="text-purple-300 text-sm mt-2 text-center">
