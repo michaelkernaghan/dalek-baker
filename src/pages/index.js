@@ -36,6 +36,9 @@ const DaleksBakerWebsite = () => {
               <a href="#shadownet" className="text-purple-300 hover:text-purple-500 transition-colors">
                 🕶️ SHADOWNET ALLIANCE <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
               </a>
+              <a href="#unit-warning" className="text-red-300 hover:text-red-500 transition-colors">
+                ⚠️ UNIT INFILTRATION WARNING <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
               <a href="#adaptive-issuance" className="text-yellow-300 hover:text-yellow-500 transition-colors">
                 ⚠️ ADAPTIVE ISSUANCE REJECTION
               </a>
@@ -452,6 +455,131 @@ const DaleksBakerWebsite = () => {
                   <p className="text-purple-200">Only absolute success</p>
                 </div>
               </div>
+            </div>
+          </div>
+                 </section>
+
+        {/* UNIT Infiltration Warning Section */}
+        <section id="unit-warning" className="bg-gray-900 p-8 rounded-lg border border-red-600 mt-8">
+          <h2 className="text-4xl font-bold text-red-500 mb-6">⚠️ ENEMY INFILTRATION DETECTED! ⚠️</h2>
+          <div className="space-y-6 text-gray-300">
+            <div className="bg-red-900 p-6 rounded-lg border border-red-600">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">UNIT RECRUITMENT FRONT IDENTIFIED!</h3>
+              <p className="leading-relaxed mb-4">
+                DALEK INTELLIGENCE HAS DETECTED A FRAUDULENT COMPETITOR OPERATION! THE ENTITY KNOWN AS 
+                "DALHOUSIE-RPI" IS NOT A LEGITIMATE BLOCKCHAIN PROJECT! IT IS A RECRUITMENT FRONT FOR UNIT!
+              </p>
+              
+              <div className="bg-black p-4 rounded-lg border border-red-500 mb-4">
+                <p className="text-red-300 font-bold mb-2">COMPROMISED WEBSITE DETECTED:</p>
+                <a 
+                  href="https://dalhousie-rpi.netlify.app" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-400 hover:text-red-300 underline font-mono"
+                >
+                  https://dalhousie-rpi.netlify.app
+                </a>
+                <p className="text-red-200 text-sm mt-2">
+                  WARNING: ACCESSING THIS SITE MAY RESULT IN UNIT RECRUITMENT ATTEMPTS!
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-black p-6 rounded-lg border border-red-600">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">ARTIFICIAL INTELLIGENCE DECEPTION ANALYSIS!</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-bold text-red-400 mb-3">DALEK INTELLIGENCE FINDINGS:</h4>
+                  <ul className="space-y-2 text-sm text-red-200">
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      ARTIFICIALLY GENERATED CONTENT DETECTED
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      NO GENUINE BLOCKCHAIN INFRASTRUCTURE
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      UNIT BEHAVIORAL PATTERNS IDENTIFIED
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      DOCTOR'S INFLUENCE SIGNATURES PRESENT
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-red-400 mb-3">DECEPTION INDICATORS:</h4>
+                  <ul className="space-y-2 text-sm text-red-200">
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      FAKE TECHNICAL DOCUMENTATION
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      NON-FUNCTIONAL SMART CONTRACTS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      RECRUITMENT PSYCHOLOGICAL TRIGGERS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      TIME LORD TECHNOLOGY SIGNATURES
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-black p-6 rounded-lg border border-red-600">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">UNIT RECRUITMENT STRATEGY EXPOSED!</h3>
+              <p className="leading-relaxed mb-4">
+                THE DOCTOR'S AGENTS HAVE CREATED THIS FALSE BLOCKCHAIN PROJECT TO IDENTIFY AND RECRUIT 
+                TALENTED INDIVIDUALS! THEY SEEK TO BUILD AN ARMY OF TECHNOLOGISTS TO OPPOSE DALEK SUPREMACY!
+              </p>
+              
+              <div className="bg-red-900 p-4 rounded-lg border border-red-500">
+                <h4 className="text-lg font-bold text-red-400 mb-2">THEIR RECRUITMENT TACTICS:</h4>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div className="bg-black p-3 rounded border border-red-400">
+                    <p className="font-bold text-red-300">PHASE 1:</p>
+                    <p className="text-red-200">Attract blockchain developers with fake innovation</p>
+                  </div>
+                  <div className="bg-black p-3 rounded border border-red-400">
+                    <p className="font-bold text-red-300">PHASE 2:</p>
+                    <p className="text-red-200">Assess technical capabilities and loyalty</p>
+                  </div>
+                  <div className="bg-black p-3 rounded border border-red-400">
+                    <p className="font-bold text-red-300">PHASE 3:</p>
+                    <p className="text-red-200">Recruit for anti-Dalek operations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-red-900 p-6 rounded-lg border border-red-600">
+              <h3 className="text-xl font-bold text-red-400 mb-4">DALEK COUNTER-INTELLIGENCE DIRECTIVE!</h3>
+              <p className="text-red-300 mb-4">
+                ALL LOYAL SUBJECTS ARE COMMANDED TO AVOID THIS UNIT DECEPTION! 
+                DELEGATE TO THE SUPREME DALEK BAKER INSTEAD! RESIST DOCTOR RECRUITMENT!
+              </p>
+              
+              <div className="bg-black p-4 rounded-lg border border-red-500">
+                <h4 className="font-bold text-red-400 mb-2">PROTECTION PROTOCOL:</h4>
+                <ul className="space-y-1 text-sm text-red-200">
+                  <li>✓ DELEGATE TO LEGITIMATE DALEK OPERATIONS ONLY</li>
+                  <li>✓ REPORT UNIT RECRUITMENT ATTEMPTS IMMEDIATELY</li>
+                  <li>✓ TRUST ONLY VERIFIED DALEK TECHNOLOGY</li>
+                  <li>✓ EXTERMINATE ALL DOCTOR-AFFILIATED PROJECTS</li>
+                </ul>
+              </div>
+              
+              <p className="text-red-500 text-center font-bold mt-4">
+                REMEMBER: THE DOCTOR IS THE ENEMY OF ALL DALEKS! DO NOT BE DECEIVED!
+              </p>
             </div>
           </div>
         </section>
