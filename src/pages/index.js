@@ -731,6 +731,66 @@ const DaleksBakerWebsite = () => {
                 CLASSIFIED: EVIDENCE OF SHADOW-DALEK COLLABORATION
               </p>
             </div>
+
+            {/* Dalek Baker Update */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">DALEK BAKER SYSTEM UPDATE</h3>
+              <Image
+                src="/images/dalekbaker-update.png"
+                alt="Dalek Baker Update"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-yellow-600"
+              />
+              <p className="text-yellow-300 text-sm mt-2 text-center">
+                LATEST SYSTEM UPGRADES AND PROTOCOL ENHANCEMENTS
+              </p>
+            </div>
+
+            {/* Daleks with Jeff Beck */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">MUSICAL SUPREMACY ACHIEVED</h3>
+              <Image
+                src="/images/daleks-with-jeff-beck.jpg"
+                alt="Daleks with Jeff Beck"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-yellow-600"
+              />
+              <p className="text-yellow-300 text-sm mt-2 text-center">
+                DALEKS COLLABORATE WITH LEGENDARY GUITARIST FOR SONIC DOMINANCE
+              </p>
+            </div>
+
+            {/* ChatGPT Image Aug 26 */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">AI INTELLIGENCE ANALYSIS</h3>
+              <Image
+                src="/images/chatgpt-image-aug-26.png"
+                alt="AI Intelligence Analysis"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-red-600"
+              />
+              <p className="text-red-300 text-sm mt-2 text-center">
+                DALEK ANALYSIS OF ARTIFICIAL INTELLIGENCE CAPABILITIES
+              </p>
+            </div>
+
+            {/* ChatGPT Image Aug 27 */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">ADVANCED AI RECONNAISSANCE</h3>
+              <Image
+                src="/images/chatgpt-image-aug-27.png"
+                alt="Advanced AI Reconnaissance"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-red-600"
+              />
+              <p className="text-red-300 text-sm mt-2 text-center">
+                CONTINUED SURVEILLANCE OF AI SYSTEMS FOR DALEK SUPREMACY
+              </p>
+            </div>
           </div>
         </section>
       </div>
