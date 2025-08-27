@@ -434,7 +434,7 @@ const DaleksBakerWebsite = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-purple-900 p-6 rounded-lg border border-purple-600">
               <h3 className="text-xl font-bold text-purple-400 mb-4">SHADOW-DALEK COLLABORATION ACTIVE!</h3>
               <p className="text-purple-300 mb-4">
@@ -789,6 +789,21 @@ const DaleksBakerWebsite = () => {
               />
               <p className="text-red-300 text-sm mt-2 text-center">
                 CONTINUED SURVEILLANCE OF AI SYSTEMS FOR DALEK SUPREMACY
+              </p>
+            </div>
+
+            {/* ChatGPT Image Aug 27 Early */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">EARLY AI INTELLIGENCE REPORT</h3>
+              <Image
+                src="/images/chatgpt-image-aug-27-early.png"
+                alt="Early AI Intelligence Report"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-red-600"
+              />
+              <p className="text-red-300 text-sm mt-2 text-center">
+                PRELIMINARY AI ANALYSIS FOR DALEK STRATEGIC PLANNING
               </p>
             </div>
           </div>
