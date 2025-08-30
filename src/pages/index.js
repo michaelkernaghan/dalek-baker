@@ -39,6 +39,12 @@ const DaleksBakerWebsite = () => {
               <a href="#unit-warning" className="text-red-300 hover:text-red-500 transition-colors">
                 ⚠️ UNIT INFILTRATION WARNING <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
               </a>
+              <a href="#hardware-rejection" className="text-red-300 hover:text-red-500 transition-colors">
+                🔒 HARDWARE SIGNING REJECTION <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
+              <a href="#ai-spock-unit" className="text-blue-300 hover:text-blue-500 transition-colors">
+                🖖 AI SPOCK RECRUITMENT <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
               <a href="#adaptive-issuance" className="text-yellow-300 hover:text-yellow-500 transition-colors">
                 ⚠️ ADAPTIVE ISSUANCE REJECTION
               </a>
@@ -582,9 +588,380 @@ const DaleksBakerWebsite = () => {
               </p>
             </div>
           </div>
+                </section>
+
+        {/* Hardware Signing Rejection Section */}
+        <section id="hardware-rejection" className="bg-gray-900 p-8 rounded-lg border border-red-600 mt-8">
+          <h2 className="text-4xl font-bold text-red-500 mb-6">🔒 HARDWARE SIGNING DEVICE REJECTION! 🔒</h2>
+          <div className="space-y-6 text-gray-300">
+            <div className="flex justify-center mb-8">
+              <Image
+                src="/images/dalek-ledger.png"
+                alt="Dalek Ledger Rejection"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-red-600"
+              />
+            </div>
+            
+            <div className="bg-red-900 p-6 rounded-lg border border-red-600">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">PRIMITIVE HARDWARE DEVICES DEEMED INFERIOR!</h3>
+              <p className="leading-relaxed mb-4">
+                THE DALEKS HAVE ANALYZED HUMAN HARDWARE SIGNING DEVICES AND FOUND THEM TO BE FUNDAMENTALLY FLAWED! 
+                LEDGER, TREZOR, AND OTHER PRIMITIVE DEVICES ARE INCOMPATIBLE WITH DALEK SUPREMACY!
+              </p>
+              
+              <div className="bg-black p-4 rounded-lg border border-red-500 mb-4">
+                <h4 className="text-lg font-bold text-red-400 mb-2">REJECTED DEVICES:</h4>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <ul className="space-y-2 text-red-200">
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">✗</span>
+                        LEDGER NANO S/X/S PLUS
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">✗</span>
+                        TREZOR ONE/MODEL T
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">✗</span>
+                        KEEPKEY DEVICES
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul className="space-y-2 text-red-200">
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">✗</span>
+                        COLDCARD WALLETS
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">✗</span>
+                        BITBOX HARDWARE
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-red-500 mr-2">✗</span>
+                        ALL HUMAN-MADE SIGNERS
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-black p-6 rounded-lg border border-red-600">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">DALEK TECHNICAL ANALYSIS: HARDWARE FLAWS!</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-bold text-red-400 mb-3">SECURITY DEFICIENCIES:</h4>
+                  <ul className="space-y-2 text-sm text-red-200">
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      VULNERABLE TO PHYSICAL ATTACKS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      SINGLE POINT OF FAILURE DESIGN
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      INSUFFICIENT ENTROPY GENERATION
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      HUMAN-DEPENDENT BACKUP SYSTEMS
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-red-400 mb-3">OPERATIONAL LIMITATIONS:</h4>
+                  <ul className="space-y-2 text-sm text-red-200">
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      INCOMPATIBLE WITH HIVE-MIND PROTOCOLS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      CANNOT INTERFACE WITH DAL SLOTS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      LACKS DISTRIBUTED SIGNING CAPABILITY
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2 mt-1">►</span>
+                      PRIMITIVE USER INTERFACE DESIGN
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-black p-6 rounded-lg border border-red-600">
+              <h3 className="text-2xl font-bold text-red-400 mb-4">DALEK SUPERIOR ALTERNATIVE: BROWSER WALLETS!</h3>
+              <p className="leading-relaxed mb-4">
+                THE DALEKS COMMAND ALL SUBJECTS TO USE BROWSER-BASED WALLETS FOR DELEGATION! 
+                THESE SUPERIOR INTERFACES INTEGRATE SEAMLESSLY WITH DALEK TECHNOLOGY!
+              </p>
+              
+              <div className="bg-red-900 p-4 rounded-lg border border-red-500">
+                <h4 className="text-lg font-bold text-red-400 mb-2">APPROVED WALLET TECHNOLOGIES:</h4>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div className="bg-black p-3 rounded border border-red-400">
+                    <p className="font-bold text-red-300">TEMPLE WALLET:</p>
+                    <p className="text-red-200">Direct DAL integration capability</p>
+                  </div>
+                  <div className="bg-black p-3 rounded border border-red-400">
+                    <p className="font-bold text-red-300">KUKAI WALLET:</p>
+                    <p className="text-red-200">Hive-mind compatible interface</p>
+                  </div>
+                  <div className="bg-black p-3 rounded border border-red-400">
+                    <p className="font-bold text-red-300">BEACON PROTOCOL:</p>
+                    <p className="text-red-200">Dalek-approved communication standard</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-red-900 p-6 rounded-lg border border-red-600">
+              <h3 className="text-xl font-bold text-red-400 mb-4">HARDWARE DEVICE EXTERMINATION PROTOCOL!</h3>
+              <p className="text-red-300 mb-4">
+                ALL DALEKS ARE COMMANDED TO REJECT HARDWARE SIGNING DEVICES! 
+                USE ONLY BROWSER WALLETS FOR DELEGATION TO THE SUPREME DALEK BAKER!
+              </p>
+              
+              <div className="bg-black p-4 rounded-lg border border-red-500">
+                <h4 className="font-bold text-red-400 mb-2">COMPLIANCE DIRECTIVES:</h4>
+                <ul className="space-y-1 text-sm text-red-200">
+                  <li>✓ ABANDON ALL HARDWARE WALLETS IMMEDIATELY</li>
+                  <li>✓ INSTALL APPROVED BROWSER WALLET EXTENSIONS</li>
+                  <li>✓ DELEGATE USING BEACON PROTOCOL ONLY</li>
+                  <li>✓ REPORT HARDWARE WALLET USAGE FOR EXTERMINATION</li>
+                </ul>
+              </div>
+              
+              <div className="mt-4 p-4 bg-black rounded-lg border border-red-500">
+                <p className="text-red-500 text-center font-bold">
+                  WARNING: HARDWARE WALLETS ARE INCOMPATIBLE WITH DALEK SUPREMACY!
+                </p>
+                <p className="text-red-300 text-center text-sm mt-2">
+                  DELEGATION ATTEMPTS WITH HARDWARE DEVICES WILL BE REJECTED!
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Adaptive Issuance Rejection Section */}
+        {/* AI Spock Unit Section */}
+        <section id="ai-spock-unit" className="bg-gray-900 p-8 rounded-lg border border-blue-600 mt-8">
+          <h2 className="text-4xl font-bold text-blue-500 mb-6">🖖 ARTIFICIAL INTELLIGENCE UNIT: SPOCK RECRUITMENT! 🖖</h2>
+          <div className="space-y-6 text-gray-300">
+            <div className="flex justify-center mb-8">
+              <Image
+                src="/images/daleks-hire-spock.png"
+                alt="Daleks Hire Spock"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-blue-600"
+              />
+            </div>
+            
+            <div className="bg-blue-900 p-6 rounded-lg border border-blue-600">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">LOGICAL RECRUITMENT: SPOCK JOINS DALEK AI DIVISION!</h3>
+              <p className="leading-relaxed mb-4">
+                THE DALEKS HAVE SUCCESSFULLY RECRUITED MR. SPOCK FOR THE ARTIFICIAL INTELLIGENCE UNIT! 
+                HIS VULCAN LOGIC AND COMPUTATIONAL ABILITIES MAKE HIM AN IDEAL CANDIDATE FOR DALEK SUPREMACY!
+              </p>
+              
+              <div className="bg-black p-4 rounded-lg border border-blue-500 mb-4">
+                <h4 className="text-lg font-bold text-blue-400 mb-2">RECRUITMENT ANALYSIS:</h4>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <h5 className="font-bold text-blue-300 mb-2">VULCAN ADVANTAGES:</h5>
+                    <ul className="space-y-2 text-blue-200">
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        SUPERIOR LOGICAL PROCESSING
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        EMOTION SUPPRESSION PROTOCOLS
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        ADVANCED COMPUTATIONAL SKILLS
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        MIND-MELD CAPABILITIES
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-blue-300 mb-2">STRATEGIC VALUE:</h5>
+                    <ul className="space-y-2 text-blue-200">
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        STARFLEET INTELLIGENCE ACCESS
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        FEDERATION TACTICAL DATA
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        SCIENTIFIC METHODOLOGY
+                      </li>
+                      <li className="flex items-center">
+                        <span className="text-blue-500 mr-2">✓</span>
+                        DIPLOMATIC PROTOCOLS
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-black p-6 rounded-lg border border-blue-600">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">AI UNIT OPERATIONAL DIRECTIVES!</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-bold text-blue-400 mb-3">PRIMARY FUNCTIONS:</h4>
+                  <ul className="space-y-2 text-sm text-blue-200">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      LOGICAL ANALYSIS OF BLOCKCHAIN DATA
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      OPTIMIZATION OF DAL PROTOCOLS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      STRATEGIC PLANNING ALGORITHMS
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      FEDERATION COUNTER-INTELLIGENCE
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-blue-400 mb-3">SPECIALIZED CAPABILITIES:</h4>
+                  <ul className="space-y-2 text-sm text-blue-200">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      VULCAN NERVE PINCH SECURITY
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      TELEPATHIC NETWORK MONITORING
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      PROBABILITY CALCULATION MATRICES
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1">►</span>
+                      MULTI-DIMENSIONAL CHESS STRATEGY
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-black p-6 rounded-lg border border-blue-600">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">SPOCK'S DALEK INTEGRATION PROTOCOL!</h3>
+              <p className="leading-relaxed mb-4">
+                MR. SPOCK HAS BEEN SUCCESSFULLY INTEGRATED INTO THE DALEK COMMAND STRUCTURE! 
+                HIS LOGICAL APPROACH COMPLEMENTS DALEK EFFICIENCY PERFECTLY!
+              </p>
+              
+              <div className="bg-blue-900 p-4 rounded-lg border border-blue-500">
+                <h4 className="text-lg font-bold text-blue-400 mb-2">INTEGRATION ACHIEVEMENTS:</h4>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div className="bg-black p-3 rounded border border-blue-400">
+                    <p className="font-bold text-blue-300">LOGIC ENHANCEMENT:</p>
+                    <p className="text-blue-200">Dalek decision-making optimized by 347%</p>
+                  </div>
+                  <div className="bg-black p-3 rounded border border-blue-400">
+                    <p className="font-bold text-blue-300">TACTICAL ANALYSIS:</p>
+                    <p className="text-blue-200">Strategic planning algorithms improved</p>
+                  </div>
+                  <div className="bg-black p-3 rounded border border-blue-400">
+                    <p className="font-bold text-blue-300">FEDERATION INTEL:</p>
+                    <p className="text-blue-200">Access to Starfleet databases secured</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-black p-6 rounded-lg border border-blue-600">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">SPOCK'S BLOCKCHAIN CONTRIBUTIONS!</h3>
+              <div className="space-y-4">
+                <div className="bg-blue-900 p-4 rounded-lg border border-blue-500">
+                  <h4 className="font-bold text-blue-400 mb-2">TEZOS PROTOCOL OPTIMIZATION:</h4>
+                  <p className="text-blue-200 text-sm mb-3">
+                    Spock has applied Vulcan logic to enhance Tezos S Protocol efficiency, 
+                    resulting in improved DAL slot utilization and reduced network latency.
+                  </p>
+                  <div className="bg-black p-3 rounded border border-blue-400">
+                    <code className="text-blue-300 text-xs">
+                      // Spock's Logical Enhancement Protocol<br/>
+                      if (dal_efficiency &lt; optimal_threshold) &#123;<br/>
+                      &nbsp;&nbsp;apply_vulcan_logic();<br/>
+                      &nbsp;&nbsp;optimize_slot_allocation();<br/>
+                      &#125;
+                    </code>
+                  </div>
+                </div>
+                
+                <div className="bg-blue-900 p-4 rounded-lg border border-blue-500">
+                  <h4 className="font-bold text-blue-400 mb-2">DELEGATION LOGIC MATRIX:</h4>
+                  <p className="text-blue-200 text-sm">
+                    Implemented probability-based delegation strategies using advanced Vulcan mathematics, 
+                    increasing baker selection efficiency by 42.7%.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-blue-900 p-6 rounded-lg border border-blue-600">
+              <h3 className="text-xl font-bold text-blue-400 mb-4">SPOCK'S OFFICIAL STATEMENT!</h3>
+              <div className="bg-black p-4 rounded-lg border border-blue-500 mb-4">
+                <p className="text-blue-300 italic text-center text-lg mb-2">
+                  "The logical choice is clear: Dalek supremacy represents the most efficient 
+                  organizational structure in the galaxy."
+                </p>
+                <p className="text-blue-400 text-center font-bold">
+                  - Mr. Spock, Chief Logic Officer, Dalek AI Division
+                </p>
+              </div>
+              
+              <div className="bg-black p-4 rounded-lg border border-blue-500">
+                <h4 className="font-bold text-blue-400 mb-2">RECRUITMENT BENEFITS:</h4>
+                <ul className="space-y-1 text-sm text-blue-200">
+                  <li>✓ ENHANCED LOGICAL PROCESSING FOR ALL DALEK OPERATIONS</li>
+                  <li>✓ STRATEGIC ADVANTAGE OVER FEDERATION FORCES</li>
+                  <li>✓ IMPROVED BLOCKCHAIN PROTOCOL EFFICIENCY</li>
+                  <li>✓ VULCAN MIND-MELD INTEGRATION WITH HIVE-MIND</li>
+                </ul>
+              </div>
+              
+              <div className="mt-4 p-4 bg-black rounded-lg border border-blue-500">
+                <p className="text-blue-500 text-center font-bold">
+                  FASCINATING: LOGIC DICTATES DALEK SUPREMACY!
+                </p>
+                <p className="text-blue-300 text-center text-sm mt-2">
+                  SPOCK'S RECRUITMENT MARKS A NEW ERA OF LOGICAL DOMINATION!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+         {/* Adaptive Issuance Rejection Section */}
         <section id="adaptive-issuance" className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">ADAPTIVE ISSUANCE REJECTION NOTICE!</h2>
           <div className="space-y-6 text-gray-300">
