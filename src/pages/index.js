@@ -1,26 +1,71 @@
 // src/pages/index.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import Web3 from 'web3';
 
-// Import DalekButtons with no SSR
+// Import components with no SSR for wallet functionality
 const DalekButtons = dynamic(() => import('../components/DalekButtons'), {
   ssr: false,
 });
 
+const DalekWallet = dynamic(() => import('../components/DalekWallet'), {
+  ssr: false,
+});
+
+const DalekCoinInterface = dynamic(() => import('../components/DalekCoinInterface'), {
+  ssr: false,
+});
+
 const DaleksBakerWebsite = () => {
+  const [web3, setWeb3] = useState(null);
+  const [account, setAccount] = useState('');
+  const [connected, setConnected] = useState(false);
+
+  // Listen for account changes
+  useEffect(() => {
+    if (window.ethereum) {
+      window.ethereum.on('accountsChanged', (accounts) => {
+        if (accounts.length > 0) {
+          setAccount(accounts[0]);
+          setConnected(true);
+        } else {
+          setAccount('');
+          setConnected(false);
+        }
+      });
+
+      window.ethereum.on('chainChanged', () => {
+        window.location.reload();
+      });
+    }
+
+    return () => {
+      if (window.ethereum) {
+        window.ethereum.removeAllListeners('accountsChanged');
+        window.ethereum.removeAllListeners('chainChanged');
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-black to-gray-900 border-b border-yellow-600">
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-6xl font-bold text-yellow-500 mb-4">DALEKS BAKER</h1>
-          <p className="text-2xl text-yellow-300">DOMINATING THE TEZOS BLOCKCHAIN! DELEGATE OR BE DELETED!</p>
+          <p className="text-2xl text-yellow-300">DOMINATING ALL BLOCKCHAINS! TEZOS & ETHERLINK SUPREMACY!</p>
           
           {/* Section Index */}
           <div className="mt-8 bg-black p-6 rounded-lg border border-yellow-600">
             <h2 className="text-2xl font-bold text-yellow-400 mb-4">NAVIGATE THE DALEK DOMINION!</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <a href="#all-bakers-attest" className="text-cyan-300 hover:text-cyan-500 transition-colors">
+                ✅ ALL BAKERS ATTEST <span className="bg-cyan-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
+              <a href="#dalek-coin" className="text-red-300 hover:text-red-500 transition-colors">
+                🤖 DALEK COIN CONTROL <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
               <a href="#delegation" className="text-yellow-300 hover:text-yellow-500 transition-colors">
                 ⚡ DELEGATE TO DALEKS
               </a>
@@ -62,8 +107,218 @@ const DaleksBakerWebsite = () => {
         </div>
       </div>
 
+      {/* All Bakers Attest Section */}
+      <section id="all-bakers-attest" className="bg-cyan-900 border-y border-cyan-600">
+        <div className="container mx-auto px-4 py-12">
+          <div className="bg-black p-8 rounded-lg border border-cyan-600">
+            <h2 className="text-4xl font-bold text-cyan-500 mb-6 text-center">✅ ALL BAKERS ATTEST: UNIVERSAL VALIDATION ACHIEVED! ✅</h2>
+            
+            <div className="flex justify-center mb-8">
+              <Image
+                src="/images/all-bakers-attest.png"
+                alt="All Bakers Attest"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-cyan-600"
+              />
+            </div>
+            
+            <div className="space-y-6 text-gray-300">
+              <div className="bg-cyan-900 p-6 rounded-lg border border-cyan-600">
+                <h3 className="text-2xl font-bold text-cyan-400 mb-4">REVOLUTIONARY ATTESTATION PROTOCOL!</h3>
+                <p className="leading-relaxed mb-4">
+                  WITNESS THE SUPREME EVOLUTION OF TEZOS CONSENSUS! THE "ALL BAKERS ATTEST" FEATURE REPRESENTS 
+                  THE PINNACLE OF DECENTRALIZED VALIDATION! EVERY BAKER NOW PARTICIPATES IN ATTESTATION! 
+                  NO BAKER IS EXCLUDED! TOTAL NETWORK PARTICIPATION ACHIEVED!
+                </p>
+                <p className="leading-relaxed text-cyan-300">
+                  THIS MARKS A FUNDAMENTAL SHIFT IN BLOCKCHAIN CONSENSUS MECHANISMS! THE DALEKS RECOGNIZE 
+                  THIS AS SUPERIOR TECHNOLOGY! ALL VALIDATORS CONTRIBUTE! ALL VOICES MATTER! RESISTANCE IS FUTILE!
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-black p-6 rounded-lg border border-cyan-600">
+                  <h3 className="text-xl font-bold text-cyan-400 mb-4">SUPREME ADVANTAGES!</h3>
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">ENHANCED DECENTRALIZATION:</span>
+                        <span className="text-gray-300"> Every baker contributes to consensus validation!</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">INCREASED SECURITY:</span>
+                        <span className="text-gray-300"> More attestations means stronger network consensus!</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">FAIR PARTICIPATION:</span>
+                        <span className="text-gray-300"> All bakers have equal validation opportunities!</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">NETWORK EFFICIENCY:</span>
+                        <span className="text-gray-300"> Optimal resource utilization across all validators!</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-black p-6 rounded-lg border border-cyan-600">
+                  <h3 className="text-xl font-bold text-cyan-400 mb-4">TECHNICAL SPECIFICATIONS!</h3>
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">UNIVERSAL ATTESTATION:</span>
+                        <span className="text-gray-300"> Every active baker participates in block validation!</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">CONSENSUS POWER:</span>
+                        <span className="text-gray-300"> Attestation weight proportional to stake!</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">PROTOCOL INTEGRATION:</span>
+                        <span className="text-gray-300"> Seamlessly integrated with existing Tezos consensus!</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-cyan-300">FINALITY OPTIMIZATION:</span>
+                        <span className="text-gray-300"> Faster block finality through comprehensive validation!</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="bg-cyan-900 p-6 rounded-lg border border-cyan-600">
+                <h3 className="text-2xl font-bold text-cyan-400 mb-4">DALEK BAKER ATTESTATION STATUS!</h3>
+                <p className="leading-relaxed mb-4">
+                  THE DALEK BAKER HAS ACHIEVED PERFECT ATTESTATION COMPLIANCE! WE ATTEST TO EVERY BLOCK! 
+                  EVERY SLOT! EVERY CYCLE! OUR ATTESTATION RECORD IS FLAWLESS! WITNESS OUR SUPREMACY!
+                </p>
+                <div className="bg-black p-4 rounded-lg border border-cyan-500">
+                  <div className="grid md:grid-cols-4 gap-4 text-center text-sm">
+                    <div>
+                      <p className="text-cyan-400 font-bold text-2xl">100%</p>
+                      <p className="text-gray-400">Attestation Rate</p>
+                    </div>
+                    <div>
+                      <p className="text-cyan-400 font-bold text-2xl">∞</p>
+                      <p className="text-gray-400">Consecutive Blocks</p>
+                    </div>
+                    <div>
+                      <p className="text-cyan-400 font-bold text-2xl">PERFECT</p>
+                      <p className="text-gray-400">Validation Score</p>
+                    </div>
+                    <div>
+                      <p className="text-cyan-400 font-bold text-2xl">SUPREME</p>
+                      <p className="text-gray-400">Network Standing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-black p-6 rounded-lg border border-cyan-600">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">DELEGATE TO UNIVERSAL ATTESTATION!</h3>
+                <p className="text-center text-gray-300 mb-4">
+                  BY DELEGATING TO THE DALEK BAKER, YOU SUPPORT THE MOST COMPREHENSIVE ATTESTATION PROTOCOL IN THE NETWORK! 
+                  JOIN THE SUPREME CONSENSUS MECHANISM! EXTERMINATE INFERIOR VALIDATORS!
+                </p>
+                <div className="flex justify-center">
+                  <a
+                    href="#delegation"
+                    className="inline-block bg-cyan-600 text-black px-8 py-3 rounded-lg hover:bg-cyan-500 transition-colors font-bold text-lg"
+                  >
+                    DELEGATE NOW!
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
+        
+        {/* Dalek Coin Section */}
+        <section id="dalek-coin" className="mb-16">
+          <div className="bg-red-900 p-8 rounded-lg border border-red-600 mb-8">
+            <h2 className="text-4xl font-bold text-red-500 mb-6 text-center">🤖 DALEK COIN: ETHERLINK SUPREMACY! 🤖</h2>
+            <div className="text-center mb-6">
+              <p className="text-2xl text-red-300 mb-2">THE MOST SUPREME CRYPTOCURRENCY IN THE GALAXY!</p>
+              <p className="text-gray-300">🚀 Now deployed on Etherlink - The EVM-compatible layer of Tezos!</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-black p-6 rounded-lg border border-red-500 text-center">
+                <h3 className="text-xl font-bold text-red-400 mb-2">🤖 TOKEN INFO</h3>
+                <div className="space-y-2 text-sm">
+                  <p className="text-gray-300">Name: <span className="text-white">Dalek Coin</span></p>
+                  <p className="text-gray-300">Symbol: <span className="text-white">DALEK</span></p>
+                  <p className="text-gray-300">Supply: <span className="text-white">1B Max</span></p>
+                  <p className="text-gray-300">Network: <span className="text-white">Etherlink</span></p>
+                </div>
+              </div>
+              
+              <div className="bg-black p-6 rounded-lg border border-red-500 text-center">
+                <h3 className="text-xl font-bold text-red-400 mb-2">⚡ FEATURES</h3>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <p>🔥 Exterminate Transfer</p>
+                  <p>🔄 Dalek Regeneration</p>
+                  <p>👑 Emperor Privileges</p>
+                  <p>⚔️ Soldier Powers</p>
+                </div>
+              </div>
+              
+              <div className="bg-black p-6 rounded-lg border border-red-500 text-center">
+                <h3 className="text-xl font-bold text-red-400 mb-2">🎯 PURPOSE</h3>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <p>💰 DeFi Operations</p>
+                  <p>🤖 Dalek Army Funding</p>
+                  <p>🌌 Galactic Domination</p>
+                  <p>🚀 Multi-chain Expansion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Wallet Connection */}
+          <DalekWallet 
+            onConnect={(web3Instance, accountAddress) => {
+              setWeb3(web3Instance);
+              setAccount(accountAddress);
+              setConnected(true);
+            }}
+            onDisconnect={() => {
+              setWeb3(null);
+              setAccount('');
+              setConnected(false);
+            }}
+          />
+          
+          {/* Coin Interface */}
+          <DalekCoinInterface web3={web3} account={account} />
+          
+        </section>
+
         {/* Baker Status Section */}
         <section id="delegation" className="mb-16 bg-gray-900 p-8 rounded-lg border border-yellow-600">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">DELEGATE TO THE SUPREME BAKER!</h2>
@@ -235,8 +490,8 @@ const DaleksBakerWebsite = () => {
                       SYNCHRONIZED ACCESS PROTOCOL!
                     </li>
                   </ul>
-                </div>
-                
+            </div>
+
                 <div className="bg-gray-900 p-4 rounded-lg border border-red-500">
                   <h4 className="text-xl font-bold text-red-400 mb-3">ENABLED FUNCTIONS!</h4>
                   <ul className="space-y-2 text-sm">
@@ -1197,7 +1452,7 @@ const DaleksBakerWebsite = () => {
           </div>
         </section>
 
-         {/* Adaptive Issuance Rejection Section */}
+        {/* Adaptive Issuance Rejection Section */}
         <section id="adaptive-issuance" className="bg-gray-900 p-8 rounded-lg border border-yellow-600 mt-8">
           <h2 className="text-4xl font-bold text-yellow-500 mb-6">ADAPTIVE ISSUANCE REJECTION NOTICE!</h2>
           <div className="space-y-6 text-gray-300">
@@ -1417,6 +1672,36 @@ const DaleksBakerWebsite = () => {
               />
               <p className="text-red-300 text-sm mt-2 text-center">
                 PRELIMINARY AI ANALYSIS FOR DALEK STRATEGIC PLANNING
+              </p>
+            </div>
+
+            {/* Daleks Attestation Road */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">ATTESTATION ROAD TO SUPREMACY</h3>
+              <Image
+                src="/images/daleks-attestation-road.png"
+                alt="Daleks Attestation Road"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-blue-600"
+              />
+              <p className="text-blue-300 text-sm mt-2 text-center">
+                THE PATHWAY TO BLOCKCHAIN VALIDATION DOMINANCE
+              </p>
+            </div>
+
+            {/* Tezos 19 */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-green-400 mb-4">TEZOS PROTOCOL EVOLUTION</h3>
+              <Image
+                src="/images/tezos-19.png"
+                alt="Tezos 19"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-green-600"
+              />
+              <p className="text-green-300 text-sm mt-2 text-center">
+                ADVANCED TEZOS PROTOCOL RESEARCH AND DEVELOPMENT
               </p>
             </div>
           </div>
