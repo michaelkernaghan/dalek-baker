@@ -66,6 +66,12 @@ const DaleksBakerWebsite = () => {
               <a href="#dalek-coin" className="text-red-300 hover:text-red-500 transition-colors">
                 🤖 DALEK COIN CONTROL <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
               </a>
+              <a href="#tezos-defi" className="text-orange-300 hover:text-orange-500 transition-colors">
+                💩 TEZOS DEFI DOMINATION <span className="bg-orange-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
+              <a href="#naming-investigation" className="text-pink-300 hover:text-pink-500 transition-colors">
+                🔍 NAMING CENTRALIZATION PROBE <span className="bg-pink-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
+              </a>
               <a href="#delegation" className="text-yellow-300 hover:text-yellow-500 transition-colors">
                 ⚡ DELEGATE TO DALEKS
               </a>
@@ -317,6 +323,309 @@ const DaleksBakerWebsite = () => {
           {/* Coin Interface */}
           <DalekCoinInterface web3={web3} account={account} />
           
+        </section>
+
+        {/* Tezos DeFi Section */}
+        <section id="tezos-defi" className="mb-16">
+          <div className="bg-orange-900 p-8 rounded-lg border border-orange-600">
+            <h2 className="text-4xl font-bold text-orange-500 mb-6 text-center">💩 DALEKS INVADE TEZOS DEFI! 💩</h2>
+            
+            <div className="flex justify-center mb-8">
+              <Image
+                src="/images/daleks-tezos-defi.jpg"
+                alt="Daleks Trading in Tezos Shitcoin"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-orange-600"
+              />
+            </div>
+            
+            <div className="text-center mb-6">
+              <p className="text-2xl text-orange-300 mb-2">STRATEGIC INVESTMENTS IN TEZOS DEFI MARKET!</p>
+              <p className="text-gray-300">🔥 Trading $HIT and $SKULL tokens on SpicySwap!</p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-black p-6 rounded-lg border border-orange-600">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4">🌶️ SPICYSWAP: DALEK-APPROVED DEX!</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2 mt-1">►</span>
+                        <div><span className="font-bold text-orange-300">LAUNCHED:</span> October 10, 2021</div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2 mt-1">►</span>
+                        <div><span className="font-bold text-orange-300">FLASH SWAPS:</span> Instant liquidity access</div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2 mt-1">►</span>
+                        <div><span className="font-bold text-orange-300">SPI TOKENS:</span> Platform revenue sharing</div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2 mt-1">►</span>
+                        <div><span className="font-bold text-orange-300">WRAPPED TEZ:</span> Earn staking rewards in DeFi</div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2 mt-1">►</span>
+                        <div><span className="font-bold text-orange-300">TOKEN SWAPS:</span> Direct without XTZ conversion</div>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-orange-500 mr-2 mt-1">►</span>
+                        <div><span className="font-bold text-orange-300">GOVERNANCE:</span> SalsaDAO controlled</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-black p-6 rounded-lg border border-orange-600">
+                  <h3 className="text-xl font-bold text-orange-400 mb-4">💩 $HIT COIN ACQUISITION!</h3>
+                  <p className="text-gray-300 text-sm mb-4">
+                    <span className="font-bold text-orange-300">Tezos-based token:</span> "THE FUTURE IS $HIT!"
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Part of $HITdao community
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Collaborates with SKULL Degen Club
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Active on Etherlink layer
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Humorous memecoin branding
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-black p-6 rounded-lg border border-orange-600">
+                  <h3 className="text-xl font-bold text-orange-400 mb-4">💀 SKULL COIN DOMINATION!</h3>
+                  <p className="text-gray-300 text-sm mb-4">
+                    <span className="font-bold text-orange-300">SKULL Degen Club token:</span> Community-driven utilities
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      NFT purchase capabilities
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Raffle entry access
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Exclusive Discord roles
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-2 mt-1">►</span>
+                      Limited edition PFP collections
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="bg-black p-6 rounded-lg border border-orange-600">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">DALEK DEFI STRATEGY!</h3>
+                <p className="text-center text-gray-300 mb-6">
+                  THE DALEKS RECOGNIZE THE STRATEGIC IMPORTANCE OF TEZOS DEFI! 
+                  DIVERSIFICATION ACROSS MEMECOIN MARKETS ENSURES MAXIMUM GALACTIC LIQUIDITY!
+                </p>
+                <div className="flex justify-center">
+                  <a
+                    href="https://spicyswap.xyz"
+                    className="inline-block bg-orange-600 text-black px-8 py-3 rounded-lg hover:bg-orange-500 transition-colors font-bold text-lg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    TRADE ON SPICYSWAP NOW!
+                  </a>
+                </div>
+                <p className="text-center text-orange-500 text-sm mt-4 font-bold">
+                  EXTERMINATE POOR INVESTMENT DECISIONS! ACQUIRE $HIT AND $SKULL!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Naming Centralization Investigation Section */}
+        <section id="naming-investigation" className="mb-16">
+          <div className="bg-pink-900 p-8 rounded-lg border border-pink-600">
+            <h2 className="text-4xl font-bold text-pink-500 mb-6 text-center">🔍 INVESTIGATION: TEZOS NAMING CENTRALIZATION! 🔍</h2>
+            
+            <div className="flex justify-center mb-8">
+              <Image
+                src="/images/dalek-decentralize-tezos-naming.png"
+                alt="Dalek Investigation into Tezos Naming Centralization"
+                width={1200}
+                height={800}
+                className="w-full max-w-3xl rounded-lg border border-pink-600"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-black p-6 rounded-lg border border-pink-600">
+                <h3 className="text-2xl font-bold text-pink-400 mb-4">⚠️ DECENTRALIZATION ANOMALY DETECTED!</h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  DALEK INTELLIGENCE HAS IDENTIFIED A CRITICAL INCONSISTENCY IN THE TEZOS PROTOCOL! 
+                  WHILE THE NETWORK CLAIMS DECENTRALIZED GOVERNANCE, THE PROTOCOL NAMING PROCESS 
+                  EXHIBITS CONCERNING CENTRALIZATION PATTERNS!
+                </p>
+                <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                  <p className="text-pink-300 font-bold text-center">
+                    INVESTIGATION STATUS: ACTIVE • PRIORITY: MAXIMUM • THREAT LEVEL: MODERATE
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-black p-6 rounded-lg border border-pink-600">
+                  <h3 className="text-xl font-bold text-pink-400 mb-4">📊 FINDINGS: CENTRALIZED CONTROL</h3>
+                  <ul className="space-y-3 text-sm text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">NAMING AUTHORITY:</span>
+                        <span> Single entity controls protocol name assignments</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">LACK OF GOVERNANCE:</span>
+                        <span> No DAO vote or community input on names</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">INCONSISTENT PATTERNS:</span>
+                        <span> Arbitrary naming schemes without clear methodology</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">TRANSPARENCY DEFICIT:</span>
+                        <span> Limited documentation of naming decisions</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-black p-6 rounded-lg border border-pink-600">
+                  <h3 className="text-xl font-bold text-pink-400 mb-4">🎯 DALEK DEMANDS</h3>
+                  <ul className="space-y-3 text-sm text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">DECENTRALIZE NAMING:</span>
+                        <span> Implement community governance for protocol names</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">PUBLIC VOTING:</span>
+                        <span> Allow token holders to propose and vote on names</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">TRANSPARENT PROCESS:</span>
+                        <span> Document all naming decisions publicly</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-pink-500 mr-2 mt-1">►</span>
+                      <div>
+                        <span className="font-bold text-pink-300">DALEK REPRESENTATION:</span>
+                        <span> Include Dalek Baker in naming committee</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="bg-black p-6 rounded-lg border border-pink-600">
+                <h3 className="text-2xl font-bold text-pink-400 mb-4">🔬 INVESTIGATION METHODOLOGY</h3>
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                    <h4 className="font-bold text-pink-300 mb-2 text-center">PHASE 1</h4>
+                    <p className="text-pink-200 text-sm text-center">Data Collection & Analysis</p>
+                  </div>
+                  <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                    <h4 className="font-bold text-pink-300 mb-2 text-center">PHASE 2</h4>
+                    <p className="text-pink-200 text-sm text-center">Community Consultation</p>
+                  </div>
+                  <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                    <h4 className="font-bold text-pink-300 mb-2 text-center">PHASE 3</h4>
+                    <p className="text-pink-200 text-sm text-center">Reform Proposals</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm text-center">
+                  THE DALEKS EMPLOY RIGOROUS SCIENTIFIC METHODS TO ENSURE ACCURATE FINDINGS! 
+                  ALL DATA IS VERIFIED THROUGH MULTIPLE INDEPENDENT SOURCES!
+                </p>
+              </div>
+              
+              <div className="bg-black p-6 rounded-lg border border-pink-600">
+                <h3 className="text-2xl font-bold text-pink-400 mb-4">💡 PROPOSED SOLUTIONS</h3>
+                <div className="space-y-4">
+                  <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                    <h4 className="font-bold text-pink-300 mb-2">SOLUTION 1: DAO-BASED NAMING</h4>
+                    <p className="text-pink-200 text-sm">
+                      Establish a dedicated DAO for protocol naming with token-weighted voting. 
+                      All bakers and delegates participate in name selection process.
+                    </p>
+                  </div>
+                  <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                    <h4 className="font-bold text-pink-300 mb-2">SOLUTION 2: ALGORITHMIC NAMING</h4>
+                    <p className="text-pink-200 text-sm">
+                      Implement deterministic algorithm based on protocol features and block height. 
+                      Eliminates human bias and centralization entirely.
+                    </p>
+                  </div>
+                  <div className="bg-pink-900 p-4 rounded-lg border border-pink-500">
+                    <h4 className="font-bold text-pink-300 mb-2">SOLUTION 3: COMMUNITY CONTESTS</h4>
+                    <p className="text-pink-200 text-sm">
+                      Host public naming contests for each upgrade with transparent judging criteria. 
+                      Winner receives protocol recognition and rewards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-pink-900 p-6 rounded-lg border border-pink-600">
+                <h3 className="text-xl font-bold text-pink-400 mb-4 text-center">DALEK OFFICIAL STATEMENT</h3>
+                <div className="bg-black p-4 rounded-lg border border-pink-500 mb-4">
+                  <p className="text-pink-300 italic text-center text-lg mb-2">
+                    "TRUE DECENTRALIZATION REQUIRES DECENTRALIZED GOVERNANCE AT ALL LEVELS! 
+                    THE DALEKS DEMAND TRANSPARENCY AND COMMUNITY CONTROL IN ALL PROTOCOL DECISIONS!"
+                  </p>
+                  <p className="text-pink-400 text-center font-bold">
+                    - Supreme Dalek Investigator, Governance Research Division
+                  </p>
+                </div>
+                <p className="text-center text-pink-500 text-sm font-bold">
+                  INVESTIGATION CONTINUES! REPORT NAMING IRREGULARITIES TO DALEK INTELLIGENCE!
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Baker Status Section */}
