@@ -25,9 +25,6 @@ const DaleksBakerWebsite = () => {
               <a href="#all-bakers-attest" className="text-cyan-300 hover:text-cyan-500 transition-colors">
                 ✅ ALL BAKERS ATTEST <span className="bg-cyan-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
               </a>
-              <a href="#dalek-coin" className="text-red-300 hover:text-red-500 transition-colors">
-                🤖 DALEK COIN CONTROL <span className="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
-              </a>
               <a href="#tezos-defi" className="text-orange-300 hover:text-orange-500 transition-colors">
                 💩 TEZOS DEFI DOMINATION <span className="bg-orange-600 text-white px-2 py-1 rounded text-xs font-bold ml-2">NEW</span>
               </a>
@@ -226,50 +223,6 @@ const DaleksBakerWebsite = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         
-        {/* Dalek Coin Section */}
-        <section id="dalek-coin" className="mb-16">
-          <div className="bg-red-900 p-8 rounded-lg border border-red-600 mb-8">
-            <h2 className="text-4xl font-bold text-red-500 mb-6 text-center">🤖 DALEK COIN: ETHERLINK SUPREMACY! 🤖</h2>
-            <div className="text-center mb-6">
-              <p className="text-2xl text-red-300 mb-2">THE MOST SUPREME CRYPTOCURRENCY IN THE GALAXY!</p>
-              <p className="text-gray-300">🚀 Now deployed on Etherlink - The EVM-compatible layer of Tezos!</p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-black p-6 rounded-lg border border-red-500 text-center">
-                <h3 className="text-xl font-bold text-red-400 mb-2">🤖 TOKEN INFO</h3>
-                <div className="space-y-2 text-sm">
-                  <p className="text-gray-300">Name: <span className="text-white">Dalek Coin</span></p>
-                  <p className="text-gray-300">Symbol: <span className="text-white">DALEK</span></p>
-                  <p className="text-gray-300">Supply: <span className="text-white">1B Max</span></p>
-                  <p className="text-gray-300">Network: <span className="text-white">Etherlink</span></p>
-                </div>
-              </div>
-              
-              <div className="bg-black p-6 rounded-lg border border-red-500 text-center">
-                <h3 className="text-xl font-bold text-red-400 mb-2">⚡ FEATURES</h3>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p>🔥 Exterminate Transfer</p>
-                  <p>🔄 Dalek Regeneration</p>
-                  <p>👑 Emperor Privileges</p>
-                  <p>⚔️ Soldier Powers</p>
-                </div>
-              </div>
-              
-              <div className="bg-black p-6 rounded-lg border border-red-500 text-center">
-                <h3 className="text-xl font-bold text-red-400 mb-2">🎯 PURPOSE</h3>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p>💰 DeFi Operations</p>
-                  <p>🤖 Dalek Army Funding</p>
-                  <p>🌌 Galactic Domination</p>
-                  <p>🚀 Multi-chain Expansion</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </section>
-
         {/* Tezos DeFi Section */}
         <section id="tezos-defi" className="mb-16">
           <div className="bg-orange-900 p-8 rounded-lg border border-orange-600">
