@@ -1,52 +1,14 @@
 // src/pages/index.js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import Web3 from 'web3';
 
 // Import components with no SSR for wallet functionality
 const DalekButtons = dynamic(() => import('../components/DalekButtons'), {
   ssr: false,
 });
 
-const DalekWallet = dynamic(() => import('../components/DalekWallet'), {
-  ssr: false,
-});
-
-const DalekCoinInterface = dynamic(() => import('../components/DalekCoinInterface'), {
-  ssr: false,
-});
-
 const DaleksBakerWebsite = () => {
-  const [web3, setWeb3] = useState(null);
-  const [account, setAccount] = useState('');
-  const [connected, setConnected] = useState(false);
-
-  // Listen for account changes
-  useEffect(() => {
-    if (window.ethereum) {
-      window.ethereum.on('accountsChanged', (accounts) => {
-        if (accounts.length > 0) {
-          setAccount(accounts[0]);
-          setConnected(true);
-        } else {
-          setAccount('');
-          setConnected(false);
-        }
-      });
-
-      window.ethereum.on('chainChanged', () => {
-        window.location.reload();
-      });
-    }
-
-    return () => {
-      if (window.ethereum) {
-        window.ethereum.removeAllListeners('accountsChanged');
-        window.ethereum.removeAllListeners('chainChanged');
-      }
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -305,23 +267,6 @@ const DaleksBakerWebsite = () => {
               </div>
             </div>
           </div>
-          
-          {/* Wallet Connection */}
-          <DalekWallet 
-            onConnect={(web3Instance, accountAddress) => {
-              setWeb3(web3Instance);
-              setAccount(accountAddress);
-              setConnected(true);
-            }}
-            onDisconnect={() => {
-              setWeb3(null);
-              setAccount('');
-              setConnected(false);
-            }}
-          />
-          
-          {/* Coin Interface */}
-          <DalekCoinInterface web3={web3} account={account} />
           
         </section>
 
